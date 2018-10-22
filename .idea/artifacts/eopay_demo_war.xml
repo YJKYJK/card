@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="eopay_demo:war">
+    <output-path>$PROJECT_DIR$/eopay_demo/target</output-path>
+    <root id="archive" name="eopay_demo.war">
+      <element id="artifact" artifact-name="eopay_demo:war exploded" />
+    </root>
+  </artifact>
+</component>

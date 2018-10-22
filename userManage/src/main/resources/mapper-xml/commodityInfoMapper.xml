@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.mapper.CommodityInfoMapper">
+
+   <select id="queryByUser" resultType="CommodityInfo" parameterType="java.util.Map">
+       SELECT  * FROM commodity_info WHERE merchantId=#{merchantInfo.merchantId}
+        ORDER BY createTm DESC limit #{pageNumber},#{pageSize}
+   </select>
+
+
+    <select id="queryCountByUser" resultType="Integer" parameterType="MerchantInfo">
+    SELECT COUNT(*) FROM  commodity_info WHERE merchantId=#{merchantId}
+</select>
+
+    <insert id="saveCommdityInfo" parameterType="CommodityInfo">
+        insert into commodity_info(
+        commodityId ,      <!--商品id-->
+        className ,      <!--类名-->
+        classId ,      <!--类别id-->
+        commodityName ,      <!--商品名称-->
+        merchantId ,      <!--商家id-->
+        price ,      <!--商品价格-->
+        num ,      <!--商品数量-->
+        remark ,      <!--商品说明-->
+        pic ,      <!--图片-->
+        createTm ,      <!--创建时间-->
+        operTm ,      <!--操作时间-->
+        selled       <!--已售数量-->
+        )
+        values(
+        #{commodityId} ,      <!--商品id-->
+        #{className} ,      <!--类名-->
+        #{classId} ,      <!--类别id-->
+        #{commodityName} ,      <!--商品名称-->
+        #{merchantId} ,      <!--商家id-->
+        #{price} ,      <!--商品价格-->
+        #{num} ,      <!--商品数量-->
+        #{remark} ,      <!--商品说明-->
+        #{pic} ,      <!--图片-->
+        #{createTm} ,      <!--创建时间-->
+        #{operTm} ,      <!--操作时间-->
+        #{selled}       <!--已售数量-->
+        )
+    </insert>
+
+    <update id="modifyCommodity" parameterType="CommodityInfo">
+        update commodity_info
+        <trim prefix="set" suffixOverrides="," suffix="where commodityId= #{commodityId} and merchantId=#{merchantId}">
+
+
+            <if test="commodityName != null and commodityName!=''">
+                commodityName=#{commodityName},
+            </if>
+
+            <if test="price != null and price!=''">
+                price=#{price},
+            </if>
+
+            <if test="remark != null and remark!=''">
+                remark=#{remark},
+            </if>
+            <if test="pic != null and pic!=''">
+                pic=#{pic},
+            </if>
+
+            <if test="operTm != null and operTm!=''">
+                operTm=#{operTm},
+            </if>
+
+        </trim>
+
+    </update>
+
+    <delete id="removeCommodity" parameterType="CommodityInfo">
+        DELETE FROM commodity_info WHERE commodityId=#{commodityId} and merchantId=#{merchantId}
+    </delete>
+
+    <select id="getCommodityByClass" resultType="CommodityInfo">
+        select * from commodity_info WHERE classId=#{classId};
+    </select>
+
+    <select id="getCommodityById" resultType="CommodityInfo">
+        select * from commodity_info WHERE commodityId=#{commodityId};
+    </select>
+
+</mapper>

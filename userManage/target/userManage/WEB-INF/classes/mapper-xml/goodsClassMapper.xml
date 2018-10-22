@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.mapper.GoodsClassMapper">
+
+    <select id="getGoodsClassById" resultType="GoodsClass">
+        select
+                classId as classId,         <!--类别id-->
+                className as className,         <!--类别名称-->
+                merchantId as merchantId,         <!--商家id-->
+                remark as remark          <!--说明-->
+        from goods_class
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="queryByUser" resultType="GoodsClass" parameterType="java.util.Map">
+        SELECT * FROM  goods_class WHERE merchantId=#{merchantInfo.merchantId}
+        ORDER BY createTm DESC limit #{pageNumber},#{pageSize}
+    </select>
+
+    <select id="queryCountByUser" resultType="Integer" parameterType="MerchantInfo">
+        SELECT COUNT(*) FROM  goods_class WHERE merchantId=#{merchantId}
+    </select>
+
+
+    <insert id="saveGoodsClass">
+        insert into goods_class(
+        className ,      <!--类别名称-->
+        merchantId ,      <!--商家id-->
+        remark ,      <!--说明-->
+        createTm ,      <!---->
+        operTm       <!---->
+        )
+        values(
+        #{className} ,      <!--类别名称-->
+        #{merchantId} ,      <!--商家id-->
+        #{remark} ,      <!--说明-->
+        #{createTm} ,      <!---->
+        #{operTm}       <!---->
+        )
+    </insert>
+
+
+    <update id="modifyGoodsClass" parameterType="GoodsClass">
+
+        update goods_class
+        <trim prefix="set" suffixOverrides="," suffix="where classId= #{classId} and merchantId=#{merchantId}">
+
+            <if test="className != null and className!=''">
+                className=#{className},
+            </if>
+
+            <if test="remark != null and remark!=''">
+                remark=#{remark},
+            </if>
+            <if test="createTm != null and createTm!=''">
+                createTm=#{createTm},
+            </if>
+            <if test="operTm != null and operTm!=''">
+                operTm=#{operTm},
+            </if>
+        </trim>
+
+    </update>
+
+    <delete id="removeGoodsClassById">
+        delete from goods_class where classId= #{classId} and merchantId=#{merchantId}
+    </delete>
+
+</mapper>

@@ -1,0 +1,45 @@
+
+body{
+    text-align: center;
+}
+
+.tops{
+    margin-top: 12px;
+}
+
+.centers{
+    padding: 0px;
+    margin: 0px;
+    margin: auto;
+
+    align-items: center;
+}
+
+.sty-a{
+    display: inline-block;
+    text-align: right;
+}
+
+.submitBtn {
+    width: 100%;
+}
+.ss{
+    display: none;
+}
+
+#danger{
+    display: none;
+}
+
+#success{
+    display: none;
+}
+
+#sbai{
+    display: none;
+}
+
+
+
+
+

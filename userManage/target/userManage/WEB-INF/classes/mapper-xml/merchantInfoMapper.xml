@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.mapper.MerchantInfoMapper">
+
+    <select id="getMerchantInfoById" resultType="MerchantInfo">
+        select
+                userId as userId,         <!--商家id-->
+                userName as userName,         <!--商家名称-->
+                password as password,         <!--商家密码-->
+                phone as phone,         <!--商家手机号-->
+                qq as qq,         <!--商家QQ-->
+                createTm as createTm,         <!--创建时间-->
+                balance as balance,         <!--用户余额-->
+                operTm as operTm          <!--用户最后操作时间-->
+        from merchant_info
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getMerchantInfoListByMap" resultType="MerchantInfo"
+            parameterType="java.util.Map">
+            select
+                userId as userId,      <!--商家id-->
+                userName as userName,      <!--商家名称-->
+                password as password,      <!--商家密码-->
+                phone as phone,      <!--商家手机号-->
+                qq as qq,      <!--商家QQ-->
+                createTm as createTm,      <!--创建时间-->
+                balance as balance,      <!--用户余额-->
+                operTm as operTm       <!--用户最后操作时间-->
+            from merchant_info
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="userName != null and userName!=''">
+                    and userName=#{userName}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="qq != null and qq!=''">
+                    and qq=#{qq}
+                </if>
+                <if test="createTm != null and createTm!=''">
+                    and createTm=#{createTm}
+                </if>
+                <if test="balance != null and balance!=''">
+                    and balance=#{balance}
+                </if>
+                <if test="operTm != null and operTm!=''">
+                    and operTm=#{operTm}
+                </if>
+        </trim>
+        order by creationDate desc
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getMerchantInfoCountByMap" resultType="Integer" parameterType="java.util.Map">
+        select count(*) from merchant_info
+        <trim prefix="where" prefixOverrides="and | or">
+                    <if test="userId != null and userId!=''">
+                        and userId=#{userId}
+                    </if>
+                    <if test="userName != null and userName!=''">
+                        and userName=#{userName}
+                    </if>
+                    <if test="password != null and password!=''">
+                        and password=#{password}
+                    </if>
+                    <if test="phone != null and phone!=''">
+                        and phone=#{phone}
+                    </if>
+                    <if test="qq != null and qq!=''">
+                        and qq=#{qq}
+                    </if>
+                    <if test="createTm != null and createTm!=''">
+                        and createTm=#{createTm}
+                    </if>
+                    <if test="balance != null and balance!=''">
+                        and balance=#{balance}
+                    </if>
+                    <if test="operTm != null and operTm!=''">
+                        and operTm=#{operTm}
+                    </if>
+        </trim>
+    </select>
+
+    <insert id="saveMerchantInfo" parameterType="MerchantInfo">
+        insert into merchant_info(
+           merchantId ,      <!--商家id-->
+            userName ,      <!--商家名称-->
+            password ,      <!--商家密码-->
+            phone ,      <!--商家手机号-->
+            qq ,      <!--商家QQ-->
+            createTm ,      <!--创建时间-->
+            balance ,      <!--用户余额-->
+            operTm       <!--用户最后操作时间-->
+        )
+        values(
+                    #{merchantId} ,      <!--商家id-->
+                    #{userName} ,      <!--商家名称-->
+                    #{password} ,      <!--商家密码-->
+                    #{phone} ,      <!--商家手机号-->
+                    #{qq} ,      <!--商家QQ-->
+                    #{createTm} ,      <!--创建时间-->
+                    #{balance} ,      <!--用户余额-->
+                    #{operTm}       <!--用户最后操作时间-->
+        )
+    </insert>
+
+    <select id="quryUserByName" resultType="Integer">
+        SELECT COUNT(1) FROM merchant_info where userName=#{userName}
+    </select>
+
+
+
+    <update id="modifyMerchantInfo" parameterType="MerchantInfo">
+        update merchant_info
+        <trim prefix="set" suffixOverrides="," suffix="where id= #{id}">
+                <if test="userId != null and userId!=''">
+                     userId=#{userId},
+                </if>
+                <if test="userName != null and userName!=''">
+                     userName=#{userName},
+                </if>
+                <if test="password != null and password!=''">
+                     password=#{password},
+                </if>
+                <if test="phone != null and phone!=''">
+                     phone=#{phone},
+                </if>
+                <if test="qq != null and qq!=''">
+                     qq=#{qq},
+                </if>
+                <if test="createTm != null and createTm!=''">
+                     createTm=#{createTm},
+                </if>
+                <if test="balance != null and balance!=''">
+                     balance=#{balance},
+                </if>
+                <if test="operTm != null and operTm!=''">
+                     operTm=#{operTm},
+                </if>
+        </trim>
+    </update>
+
+    <delete id="removeMerchantInfoById" parameterType="Long">
+        delete from merchant_info where id = #{id}
+    </delete>
+
+    <select id="login" resultType="MerchantInfo" parameterType="MerchantInfo">
+        SELECT * FROM merchant_info WHERE userName=#{userName} and password=#{password}
+    </select>
+
+    <select id="getMerchant" resultType="MerchantInfo">
+        SELECT merchantId,userName,qq,phone FROM merchant_info WHERE merchantId=#{merchantId}
+    </select>
+</mapper>

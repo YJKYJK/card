@@ -1,0 +1,54 @@
+.centers{
+    text-align: center;
+}
+
+.titleBtn{
+    height: 100%;
+    width: 49%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sp-h{
+    width: 100%;
+    display: block;
+    color: #36c2ff;
+}
+
+.hk{
+    margin: 0 auto;
+    width: 80%;
+}
+.shop{
+    margin-top: 2px;
+}
+
+.details{
+    margin: 0 auto;
+    width: 95%;
+}
+
+.imgs{
+    width: auto;
+    height:auto;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+.imgdiv{
+    width: 10rem;
+    height:10rem;
+    display: inline-block;
+}
+
+ui{
+    margin-top: 2px;
+}
+ui  li{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+    text-align: center;
+    width: 30%;
+}

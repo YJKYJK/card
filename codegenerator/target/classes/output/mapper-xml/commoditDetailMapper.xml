@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.dao.mapper.CommoditDetailMapper">
+
+    <select id="getCommoditDetailById" resultType="CommoditDetail">
+        select
+                commodityId as commodityId,         <!--商品ID-->
+                cardNumber as cardNumber,         <!--卡号-->
+                cardPassword as cardPassword,         <!--卡密-->
+                isSell as isSell,         <!--是否出售-->
+                createTm as createTm,         <!--创建时间-->
+                sellTm as sellTm,         <!--出售时间-->
+                cardId as cardId          <!--id -->
+        from commodit_detail
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getCommoditDetailListByMap" resultType="CommoditDetail"
+            parameterType="java.util.Map">
+            select
+                commodityId as commodityId,      <!--商品ID-->
+                cardNumber as cardNumber,      <!--卡号-->
+                cardPassword as cardPassword,      <!--卡密-->
+                isSell as isSell,      <!--是否出售-->
+                createTm as createTm,      <!--创建时间-->
+                sellTm as sellTm,      <!--出售时间-->
+                cardId as cardId       <!--id -->
+            from commodit_detail
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                    and commodityId=#{commodityId}
+                </if>
+                <if test="cardNumber != null and cardNumber!=''">
+                    and cardNumber=#{cardNumber}
+                </if>
+                <if test="cardPassword != null and cardPassword!=''">
+                    and cardPassword=#{cardPassword}
+                </if>
+                <if test="isSell != null and isSell!=''">
+                    and isSell=#{isSell}
+                </if>
+                <if test="createTm != null and createTm!=''">
+                    and createTm=#{createTm}
+                </if>
+                <if test="sellTm != null and sellTm!=''">
+                    and sellTm=#{sellTm}
+                </if>
+                <if test="cardId != null and (cardId!='' or cardId==0)">
+                    and cardId=#{cardId}
+                </if>
+        </trim>
+        order by creationDate desc
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getCommoditDetailCountByMap" resultType="Integer" parameterType="java.util.Map">
+        select count(*) from commodit_detail
+        <trim prefix="where" prefixOverrides="and | or">
+                    <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                        and commodityId=#{commodityId}
+                    </if>
+                    <if test="cardNumber != null and cardNumber!=''">
+                        and cardNumber=#{cardNumber}
+                    </if>
+                    <if test="cardPassword != null and cardPassword!=''">
+                        and cardPassword=#{cardPassword}
+                    </if>
+                    <if test="isSell != null and isSell!=''">
+                        and isSell=#{isSell}
+                    </if>
+                    <if test="createTm != null and createTm!=''">
+                        and createTm=#{createTm}
+                    </if>
+                    <if test="sellTm != null and sellTm!=''">
+                        and sellTm=#{sellTm}
+                    </if>
+                    <if test="cardId != null and (cardId!='' or cardId==0)">
+                        and cardId=#{cardId}
+                    </if>
+        </trim>
+    </select>
+
+    <insert id="saveCommoditDetail" parameterType="CommoditDetail">
+        insert into commodit_detail(
+            commodityId ,      <!--商品ID-->
+            cardNumber ,      <!--卡号-->
+            cardPassword ,      <!--卡密-->
+            isSell ,      <!--是否出售-->
+            createTm ,      <!--创建时间-->
+            sellTm ,      <!--出售时间-->
+            cardId       <!--id -->
+        )
+        values(
+                    #{commodityId} ,      <!--商品ID-->
+                    #{cardNumber} ,      <!--卡号-->
+                    #{cardPassword} ,      <!--卡密-->
+                    #{isSell} ,      <!--是否出售-->
+                    #{createTm} ,      <!--创建时间-->
+                    #{sellTm} ,      <!--出售时间-->
+                    #{cardId}       <!--id -->
+        )
+    </insert>
+
+    <update id="modifyCommoditDetail" parameterType="CommoditDetail">
+        update commodit_detail
+        <trim prefix="set" suffixOverrides="," suffix="where id= #{id}">
+                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                     commodityId=#{commodityId},
+                </if>
+                <if test="cardNumber != null and cardNumber!=''">
+                     cardNumber=#{cardNumber},
+                </if>
+                <if test="cardPassword != null and cardPassword!=''">
+                     cardPassword=#{cardPassword},
+                </if>
+                <if test="isSell != null and isSell!=''">
+                     isSell=#{isSell},
+                </if>
+                <if test="createTm != null and createTm!=''">
+                     createTm=#{createTm},
+                </if>
+                <if test="sellTm != null and sellTm!=''">
+                     sellTm=#{sellTm},
+                </if>
+                <if test="cardId != null and (cardId!='' or cardId==0)">
+                     cardId=#{cardId},
+                </if>
+        </trim>
+    </update>
+
+    <delete id="removeCommoditDetailById" parameterType="Long">
+        delete from commodit_detail where id = #{id}
+    </delete>
+</mapper>

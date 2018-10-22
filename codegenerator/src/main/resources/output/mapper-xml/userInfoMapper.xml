@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.dao.mapper.UserInfoMapper">
+
+    <select id="getUserInfoById" resultType="UserInfo">
+        select
+                userId as userId,         <!--用户id-->
+                userName as userName,         <!--用户名称-->
+                password as password,         <!--用户密码-->
+                phone as phone,         <!--用户手机号-->
+                qq as qq,         <!--用户QQ-->
+                createTm as createTm,         <!--创建时间-->
+                balance as balance,         <!--用户余额-->
+                operTm as operTm          <!--用户最后操作时间-->
+        from user_info
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getUserInfoListByMap" resultType="UserInfo"
+            parameterType="java.util.Map">
+            select
+                userId as userId,      <!--用户id-->
+                userName as userName,      <!--用户名称-->
+                password as password,      <!--用户密码-->
+                phone as phone,      <!--用户手机号-->
+                qq as qq,      <!--用户QQ-->
+                createTm as createTm,      <!--创建时间-->
+                balance as balance,      <!--用户余额-->
+                operTm as operTm       <!--用户最后操作时间-->
+            from user_info
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="userName != null and userName!=''">
+                    and userName=#{userName}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="qq != null and qq!=''">
+                    and qq=#{qq}
+                </if>
+                <if test="createTm != null and createTm!=''">
+                    and createTm=#{createTm}
+                </if>
+                <if test="balance != null and balance!=''">
+                    and balance=#{balance}
+                </if>
+                <if test="operTm != null and operTm!=''">
+                    and operTm=#{operTm}
+                </if>
+        </trim>
+        order by creationDate desc
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getUserInfoCountByMap" resultType="Integer" parameterType="java.util.Map">
+        select count(*) from user_info
+        <trim prefix="where" prefixOverrides="and | or">
+                    <if test="userId != null and userId!=''">
+                        and userId=#{userId}
+                    </if>
+                    <if test="userName != null and userName!=''">
+                        and userName=#{userName}
+                    </if>
+                    <if test="password != null and password!=''">
+                        and password=#{password}
+                    </if>
+                    <if test="phone != null and phone!=''">
+                        and phone=#{phone}
+                    </if>
+                    <if test="qq != null and qq!=''">
+                        and qq=#{qq}
+                    </if>
+                    <if test="createTm != null and createTm!=''">
+                        and createTm=#{createTm}
+                    </if>
+                    <if test="balance != null and balance!=''">
+                        and balance=#{balance}
+                    </if>
+                    <if test="operTm != null and operTm!=''">
+                        and operTm=#{operTm}
+                    </if>
+        </trim>
+    </select>
+
+    <insert id="saveUserInfo" parameterType="UserInfo">
+        insert into user_info(
+            userId ,      <!--用户id-->
+            userName ,      <!--用户名称-->
+            password ,      <!--用户密码-->
+            phone ,      <!--用户手机号-->
+            qq ,      <!--用户QQ-->
+            createTm ,      <!--创建时间-->
+            balance ,      <!--用户余额-->
+            operTm       <!--用户最后操作时间-->
+        )
+        values(
+                    #{userId} ,      <!--用户id-->
+                    #{userName} ,      <!--用户名称-->
+                    #{password} ,      <!--用户密码-->
+                    #{phone} ,      <!--用户手机号-->
+                    #{qq} ,      <!--用户QQ-->
+                    #{createTm} ,      <!--创建时间-->
+                    #{balance} ,      <!--用户余额-->
+                    #{operTm}       <!--用户最后操作时间-->
+        )
+    </insert>
+
+    <update id="modifyUserInfo" parameterType="UserInfo">
+        update user_info
+        <trim prefix="set" suffixOverrides="," suffix="where id= #{id}">
+                <if test="userId != null and userId!=''">
+                     userId=#{userId},
+                </if>
+                <if test="userName != null and userName!=''">
+                     userName=#{userName},
+                </if>
+                <if test="password != null and password!=''">
+                     password=#{password},
+                </if>
+                <if test="phone != null and phone!=''">
+                     phone=#{phone},
+                </if>
+                <if test="qq != null and qq!=''">
+                     qq=#{qq},
+                </if>
+                <if test="createTm != null and createTm!=''">
+                     createTm=#{createTm},
+                </if>
+                <if test="balance != null and balance!=''">
+                     balance=#{balance},
+                </if>
+                <if test="operTm != null and operTm!=''">
+                     operTm=#{operTm},
+                </if>
+        </trim>
+    </update>
+
+    <delete id="removeUserInfoById" parameterType="Long">
+        delete from user_info where id = #{id}
+    </delete>
+</mapper>

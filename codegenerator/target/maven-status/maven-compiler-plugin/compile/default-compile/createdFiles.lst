@@ -1,0 +1,6 @@
+com\ytzl\itrip\App.class
+com\ytzl\itrip\TableHandler.class
+com\ytzl\itrip\GeneratorHandler.class
+com\ytzl\itrip\beans\Column.class
+com\ytzl\itrip\Test.class
+com\ytzl\itrip\beans\Table.class

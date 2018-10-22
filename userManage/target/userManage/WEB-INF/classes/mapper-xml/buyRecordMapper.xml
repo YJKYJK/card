@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.dao.mapper.BuyRecordMapper">
+
+    <select id="getBuyRecordById" resultType="BuyRecord">
+        select
+                buyId as buyId,         <!--购买记录id-->
+                commodityId as commodityId,         <!--商品ID-->
+                commodityName as commodityName,         <!--商品名称-->
+                cardNumber as cardNumber,         <!-- 卡密 卡号-->
+                cardPassword as cardPassword,         <!--卡密 密码-->
+                buyTm as buyTm,         <!--购买时间-->
+                price as price,         <!--价格-->
+                userId as userId          <!--用户id-->
+        from buy_record
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getBuyRecordListByMap" resultType="BuyRecord"
+            parameterType="java.util.Map">
+            select
+                buyId as buyId,      <!--购买记录id-->
+                commodityId as commodityId,      <!--商品ID-->
+                commodityName as commodityName,      <!--商品名称-->
+                cardNumber as cardNumber,      <!-- 卡密 卡号-->
+                cardPassword as cardPassword,      <!--卡密 密码-->
+                buyTm as buyTm,      <!--购买时间-->
+                price as price,      <!--价格-->
+                userId as userId       <!--用户id-->
+            from buy_record
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="buyId != null and buyId!=''">
+                    and buyId=#{buyId}
+                </if>
+                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                    and commodityId=#{commodityId}
+                </if>
+                <if test="commodityName != null and commodityName!=''">
+                    and commodityName=#{commodityName}
+                </if>
+                <if test="cardNumber != null and cardNumber!=''">
+                    and cardNumber=#{cardNumber}
+                </if>
+                <if test="cardPassword != null and cardPassword!=''">
+                    and cardPassword=#{cardPassword}
+                </if>
+                <if test="buyTm != null and buyTm!=''">
+                    and buyTm=#{buyTm}
+                </if>
+                <if test="price != null and price!=''">
+                    and price=#{price}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+        </trim>
+        order by creationDate desc
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getBuyRecordCountByMap" resultType="Integer" parameterType="java.util.Map">
+        select count(*) from buy_record
+        <trim prefix="where" prefixOverrides="and | or">
+                    <if test="buyId != null and buyId!=''">
+                        and buyId=#{buyId}
+                    </if>
+                    <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                        and commodityId=#{commodityId}
+                    </if>
+                    <if test="commodityName != null and commodityName!=''">
+                        and commodityName=#{commodityName}
+                    </if>
+                    <if test="cardNumber != null and cardNumber!=''">
+                        and cardNumber=#{cardNumber}
+                    </if>
+                    <if test="cardPassword != null and cardPassword!=''">
+                        and cardPassword=#{cardPassword}
+                    </if>
+                    <if test="buyTm != null and buyTm!=''">
+                        and buyTm=#{buyTm}
+                    </if>
+                    <if test="price != null and price!=''">
+                        and price=#{price}
+                    </if>
+                    <if test="userId != null and userId!=''">
+                        and userId=#{userId}
+                    </if>
+        </trim>
+    </select>
+
+    <insert id="saveBuyRecord" parameterType="BuyRecord">
+        insert into buy_record(
+            buyId ,      <!--购买记录id-->
+            commodityId ,      <!--商品ID-->
+            commodityName ,      <!--商品名称-->
+            cardNumber ,      <!-- 卡密 卡号-->
+            cardPassword ,      <!--卡密 密码-->
+            buyTm ,      <!--购买时间-->
+            price ,      <!--价格-->
+            userId       <!--用户id-->
+        )
+        values(
+                    #{buyId} ,      <!--购买记录id-->
+                    #{commodityId} ,      <!--商品ID-->
+                    #{commodityName} ,      <!--商品名称-->
+                    #{cardNumber} ,      <!-- 卡密 卡号-->
+                    #{cardPassword} ,      <!--卡密 密码-->
+                    #{buyTm} ,      <!--购买时间-->
+                    #{price} ,      <!--价格-->
+                    #{userId}       <!--用户id-->
+        )
+    </insert>
+
+    <update id="modifyBuyRecord" parameterType="BuyRecord">
+        update buy_record
+        <trim prefix="set" suffixOverrides="," suffix="where id= #{id}">
+                <if test="buyId != null and buyId!=''">
+                     buyId=#{buyId},
+                </if>
+                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                     commodityId=#{commodityId},
+                </if>
+                <if test="commodityName != null and commodityName!=''">
+                     commodityName=#{commodityName},
+                </if>
+                <if test="cardNumber != null and cardNumber!=''">
+                     cardNumber=#{cardNumber},
+                </if>
+                <if test="cardPassword != null and cardPassword!=''">
+                     cardPassword=#{cardPassword},
+                </if>
+                <if test="buyTm != null and buyTm!=''">
+                     buyTm=#{buyTm},
+                </if>
+                <if test="price != null and price!=''">
+                     price=#{price},
+                </if>
+                <if test="userId != null and userId!=''">
+                     userId=#{userId},
+                </if>
+        </trim>
+    </update>
+
+    <delete id="removeBuyRecordById" parameterType="Long">
+        delete from buy_record where id = #{id}
+    </delete>
+</mapper>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/card.iml" filepath="$PROJECT_DIR$/card.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codegenerator/codegenerator.iml" filepath="$PROJECT_DIR$/codegenerator/codegenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eopay_demo/eopay_demo.iml" filepath="$PROJECT_DIR$/eopay_demo/eopay_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/userManage/userManage.iml" filepath="$PROJECT_DIR$/userManage/userManage.iml" />
+    </modules>
+  </component>
+</project>

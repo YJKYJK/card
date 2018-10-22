@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.dao.mapper.TopUpRecordsMapper">
+
+    <select id="getTopUpRecordsById" resultType="TopUpRecords">
+        select
+                userId as userId,         <!--用户id-->
+                userName as userName,         <!--用户名称-->
+                balance as balance,         <!--充值金额-->
+                topUpTm as topUpTm,         <!--充值时间-->
+                alipayNo as alipayNo,         <!--支付宝流水号-->
+                topUpType as topUpType,         <!--充值类型-->
+                topUpId as topUpId          <!--充值id-->
+        from top_up_records
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getTopUpRecordsListByMap" resultType="TopUpRecords"
+            parameterType="java.util.Map">
+            select
+                userId as userId,      <!--用户id-->
+                userName as userName,      <!--用户名称-->
+                balance as balance,      <!--充值金额-->
+                topUpTm as topUpTm,      <!--充值时间-->
+                alipayNo as alipayNo,      <!--支付宝流水号-->
+                topUpType as topUpType,      <!--充值类型-->
+                topUpId as topUpId       <!--充值id-->
+            from top_up_records
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="userName != null and userName!=''">
+                    and userName=#{userName}
+                </if>
+                <if test="balance != null and balance!=''">
+                    and balance=#{balance}
+                </if>
+                <if test="topUpTm != null and topUpTm!=''">
+                    and topUpTm=#{topUpTm}
+                </if>
+                <if test="alipayNo != null and alipayNo!=''">
+                    and alipayNo=#{alipayNo}
+                </if>
+                <if test="topUpType != null and topUpType!=''">
+                    and topUpType=#{topUpType}
+                </if>
+                <if test="topUpId != null and topUpId!=''">
+                    and topUpId=#{topUpId}
+                </if>
+        </trim>
+        order by creationDate desc
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getTopUpRecordsCountByMap" resultType="Integer" parameterType="java.util.Map">
+        select count(*) from top_up_records
+        <trim prefix="where" prefixOverrides="and | or">
+                    <if test="userId != null and userId!=''">
+                        and userId=#{userId}
+                    </if>
+                    <if test="userName != null and userName!=''">
+                        and userName=#{userName}
+                    </if>
+                    <if test="balance != null and balance!=''">
+                        and balance=#{balance}
+                    </if>
+                    <if test="topUpTm != null and topUpTm!=''">
+                        and topUpTm=#{topUpTm}
+                    </if>
+                    <if test="alipayNo != null and alipayNo!=''">
+                        and alipayNo=#{alipayNo}
+                    </if>
+                    <if test="topUpType != null and topUpType!=''">
+                        and topUpType=#{topUpType}
+                    </if>
+                    <if test="topUpId != null and topUpId!=''">
+                        and topUpId=#{topUpId}
+                    </if>
+        </trim>
+    </select>
+
+    <insert id="saveTopUpRecords" parameterType="TopUpRecords">
+        insert into top_up_records(
+            userId ,      <!--用户id-->
+            userName ,      <!--用户名称-->
+            balance ,      <!--充值金额-->
+            topUpTm ,      <!--充值时间-->
+            alipayNo ,      <!--支付宝流水号-->
+            topUpType ,      <!--充值类型-->
+            topUpId       <!--充值id-->
+        )
+        values(
+                    #{userId} ,      <!--用户id-->
+                    #{userName} ,      <!--用户名称-->
+                    #{balance} ,      <!--充值金额-->
+                    #{topUpTm} ,      <!--充值时间-->
+                    #{alipayNo} ,      <!--支付宝流水号-->
+                    #{topUpType} ,      <!--充值类型-->
+                    #{topUpId}       <!--充值id-->
+        )
+    </insert>
+
+    <update id="modifyTopUpRecords" parameterType="TopUpRecords">
+        update top_up_records
+        <trim prefix="set" suffixOverrides="," suffix="where id= #{id}">
+                <if test="userId != null and userId!=''">
+                     userId=#{userId},
+                </if>
+                <if test="userName != null and userName!=''">
+                     userName=#{userName},
+                </if>
+                <if test="balance != null and balance!=''">
+                     balance=#{balance},
+                </if>
+                <if test="topUpTm != null and topUpTm!=''">
+                     topUpTm=#{topUpTm},
+                </if>
+                <if test="alipayNo != null and alipayNo!=''">
+                     alipayNo=#{alipayNo},
+                </if>
+                <if test="topUpType != null and topUpType!=''">
+                     topUpType=#{topUpType},
+                </if>
+                <if test="topUpId != null and topUpId!=''">
+                     topUpId=#{topUpId},
+                </if>
+        </trim>
+    </update>
+
+    <delete id="removeTopUpRecordsById" parameterType="Long">
+        delete from top_up_records where id = #{id}
+    </delete>
+</mapper>
