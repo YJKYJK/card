@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.dao.mapper.ShopOderMapper">
+
+    <select id="getShopOderById" resultType="ShopOder">
+        select
+                oderId as oderId,         <!---->
+                classId as classId,         <!--商品类型名称-->
+                commodityId as commodityId,         <!--商品ID-->
+                number as number,         <!--商品数量-->
+                price as price,         <!--商品价格-->
+                totalPrice as totalPrice,         <!--商品总价-->
+                isPay as isPay,         <!--是否支付-->
+                oprtTm as oprtTm,         <!--操作时间-->
+                merchantId as merchantId,         <!--商家id-->
+                buyUser as buyUser,         <!--购买人(用于用户未登录)-->
+                buyUserId as buyUserId,         <!--购买人id-->
+                payType as payType          <!---->
+        from shop_oder
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getShopOderListByMap" resultType="ShopOder"
+            parameterType="java.util.Map">
+            select
+                oderId as oderId,      <!---->
+                classId as classId,      <!--商品类型名称-->
+                commodityId as commodityId,      <!--商品ID-->
+                number as number,      <!--商品数量-->
+                price as price,      <!--商品价格-->
+                totalPrice as totalPrice,      <!--商品总价-->
+                isPay as isPay,      <!--是否支付-->
+                oprtTm as oprtTm,      <!--操作时间-->
+                merchantId as merchantId,      <!--商家id-->
+                buyUser as buyUser,      <!--购买人(用于用户未登录)-->
+                buyUserId as buyUserId,      <!--购买人id-->
+                payType as payType       <!---->
+            from shop_oder
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="oderId != null and oderId!=''">
+                    and oderId=#{oderId}
+                </if>
+                <if test="classId != null and (classId!='' or classId==0)">
+                    and classId=#{classId}
+                </if>
+                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                    and commodityId=#{commodityId}
+                </if>
+                <if test="number != null and (number!='' or number==0)">
+                    and number=#{number}
+                </if>
+                <if test="price != null and price!=''">
+                    and price=#{price}
+                </if>
+                <if test="totalPrice != null and totalPrice!=''">
+                    and totalPrice=#{totalPrice}
+                </if>
+                <if test="isPay != null and isPay!=''">
+                    and isPay=#{isPay}
+                </if>
+                <if test="oprtTm != null and oprtTm!=''">
+                    and oprtTm=#{oprtTm}
+                </if>
+                <if test="merchantId != null and merchantId!=''">
+                    and merchantId=#{merchantId}
+                </if>
+                <if test="buyUser != null and buyUser!=''">
+                    and buyUser=#{buyUser}
+                </if>
+                <if test="buyUserId != null and buyUserId!=''">
+                    and buyUserId=#{buyUserId}
+                </if>
+                <if test="payType != null and payType!=''">
+                    and payType=#{payType}
+                </if>
+        </trim>
+        order by creationDate desc
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getShopOderCountByMap" resultType="Integer" parameterType="java.util.Map">
+        select count(*) from shop_oder
+        <trim prefix="where" prefixOverrides="and | or">
+                    <if test="oderId != null and oderId!=''">
+                        and oderId=#{oderId}
+                    </if>
+                    <if test="classId != null and (classId!='' or classId==0)">
+                        and classId=#{classId}
+                    </if>
+                    <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                        and commodityId=#{commodityId}
+                    </if>
+                    <if test="number != null and (number!='' or number==0)">
+                        and number=#{number}
+                    </if>
+                    <if test="price != null and price!=''">
+                        and price=#{price}
+                    </if>
+                    <if test="totalPrice != null and totalPrice!=''">
+                        and totalPrice=#{totalPrice}
+                    </if>
+                    <if test="isPay != null and isPay!=''">
+                        and isPay=#{isPay}
+                    </if>
+                    <if test="oprtTm != null and oprtTm!=''">
+                        and oprtTm=#{oprtTm}
+                    </if>
+                    <if test="merchantId != null and merchantId!=''">
+                        and merchantId=#{merchantId}
+                    </if>
+                    <if test="buyUser != null and buyUser!=''">
+                        and buyUser=#{buyUser}
+                    </if>
+                    <if test="buyUserId != null and buyUserId!=''">
+                        and buyUserId=#{buyUserId}
+                    </if>
+                    <if test="payType != null and payType!=''">
+                        and payType=#{payType}
+                    </if>
+        </trim>
+    </select>
+
+    <insert id="saveShopOder" parameterType="ShopOder">
+        insert into shop_oder(
+            oderId ,      <!---->
+            classId ,      <!--商品类型名称-->
+            commodityId ,      <!--商品ID-->
+            number ,      <!--商品数量-->
+            price ,      <!--商品价格-->
+            totalPrice ,      <!--商品总价-->
+            isPay ,      <!--是否支付-->
+            oprtTm ,      <!--操作时间-->
+            merchantId ,      <!--商家id-->
+            buyUser ,      <!--购买人(用于用户未登录)-->
+            buyUserId ,      <!--购买人id-->
+            payType       <!---->
+        )
+        values(
+                    #{oderId} ,      <!---->
+                    #{classId} ,      <!--商品类型名称-->
+                    #{commodityId} ,      <!--商品ID-->
+                    #{number} ,      <!--商品数量-->
+                    #{price} ,      <!--商品价格-->
+                    #{totalPrice} ,      <!--商品总价-->
+                    #{isPay} ,      <!--是否支付-->
+                    #{oprtTm} ,      <!--操作时间-->
+                    #{merchantId} ,      <!--商家id-->
+                    #{buyUser} ,      <!--购买人(用于用户未登录)-->
+                    #{buyUserId} ,      <!--购买人id-->
+                    #{payType}       <!---->
+        )
+    </insert>
+
+    <update id="modifyShopOder" parameterType="ShopOder">
+        update shop_oder
+        <trim prefix="set" suffixOverrides="," suffix="where id= #{id}">
+                <if test="oderId != null and oderId!=''">
+                     oderId=#{oderId},
+                </if>
+                <if test="classId != null and (classId!='' or classId==0)">
+                     classId=#{classId},
+                </if>
+                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                     commodityId=#{commodityId},
+                </if>
+                <if test="number != null and (number!='' or number==0)">
+                     number=#{number},
+                </if>
+                <if test="price != null and price!=''">
+                     price=#{price},
+                </if>
+                <if test="totalPrice != null and totalPrice!=''">
+                     totalPrice=#{totalPrice},
+                </if>
+                <if test="isPay != null and isPay!=''">
+                     isPay=#{isPay},
+                </if>
+                <if test="oprtTm != null and oprtTm!=''">
+                     oprtTm=#{oprtTm},
+                </if>
+                <if test="merchantId != null and merchantId!=''">
+                     merchantId=#{merchantId},
+                </if>
+                <if test="buyUser != null and buyUser!=''">
+                     buyUser=#{buyUser},
+                </if>
+                <if test="buyUserId != null and buyUserId!=''">
+                     buyUserId=#{buyUserId},
+                </if>
+                <if test="payType != null and payType!=''">
+                     payType=#{payType},
+                </if>
+        </trim>
+    </update>
+
+    <delete id="removeShopOderById" parameterType="Long">
+        delete from shop_oder where id = #{id}
+    </delete>
+</mapper>

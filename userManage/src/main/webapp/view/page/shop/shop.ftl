@@ -17,12 +17,12 @@
 <body>
 <h2 class="centers">${m.userName}的店铺</h2>
 
-
+<form action="/pay/gotopay" method="post">
 
 <div class="shop">
     <div class="hk">
         <span class="sp-h">商品分类</span>
-        <select class="selectpicker form-control nu"  id="goodsClass" name="goodsClass"></select>
+        <select class="selectpicker form-control nu"  id="goodsClass" name="classId"></select>
     </div>
 </div>
 
@@ -30,7 +30,7 @@
 <div class="shop">
     <div class="hk">
         <span class="sp-h">商品分类</span>
-        <select class="selectpicker form-control nu"  id="commodity" name="commodity"></select>
+        <select class="selectpicker form-control nu"  id="commodity" name="commodityId"></select>
     </div>
 </div>
 
@@ -61,7 +61,7 @@
                 <span id="price">0.00</span>
             </li>
             <li>
-                <input type="number" value="1" id="number"/>
+                <input type="number" value="0" id="number" name="number" class="numbers"/>
             </li>
             <li>
                 <span id="num">0</span>
@@ -74,13 +74,43 @@
 <div class="shop">
     <div class="hk">
         <span class="sp-h">联系方式</span>
-        <input type="text" name="className" id="userName" class="form-control nu"
+        <input type="text" name="buyUser" id="userName" class="form-control nu"
                placeholder="该联系方式用于查找订单">
     </div>
 </div>
 
 
+    <div class="shop">
+        <div class="hk">
+        <dt>支付方式：</dt>
+        <dd>
+            <select name="payType" class="selectpicker form-control nu">
+                <option value="alipay">支付宝</option>
+                <option value="wxpay">微信</option>
+                <option value="qqpay">QQ钱包</option>
+            </select>
+            </div>
+    </div>
 
+<div class="shop">
+    <div class="hk">
+        <ui class="uiclass">
+            <li>
+                <span>应付金额:</span>
+            </li>
+            <li>
+                <span class="totalpric" id="totalpric">0.00</span>元
+            </li>
+            <li>
+                <button type="submit" class="btn btn-primary">确认支付</button>
+            </li>
+
+        </ui>
+    </div>
+</div>
+
+
+</form>
 
 </body>
 <script>
@@ -160,7 +190,9 @@
                      $("#remark").html(res.remark);
                      $("#price").html(res.price);
                      $("#price").val(1);
+                     $("#number").val(0);
                      $("#num").html(res.num);
+                    $("#totalpric").html("0.00");
 
                 }
             });
@@ -176,6 +208,23 @@
 
 
 
+$("#number").on("change",function () {
+
+    var shopId=$('#commodity option:selected') .val();
+    var number=$("#number").val();
+    if(number=="" || number==null){
+        return;
+    }
+    $.ajax({
+        async:false,
+        type:"get",
+        url:"/shop/getTotalPrice",
+        data:{commodityId:shopId,number:number},
+        success:function (res) {
+            $("#totalpric").html(res);
+        }
+    })
+})
 
 
 </script>

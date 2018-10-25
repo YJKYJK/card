@@ -4,6 +4,7 @@ import com.yanyan.card.bean.CommodityInfo;
 import com.yanyan.card.bean.MerchantInfo;
 import com.yanyan.card.util.Page;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -24,4 +25,6 @@ public interface CommdityInfoService {
 
 
     public CommodityInfo getCommodityById(String commodityId);
+
+    public BigDecimal getTotalPrice(String commodityId,Integer num);
 }

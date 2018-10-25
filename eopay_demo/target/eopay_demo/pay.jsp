@@ -17,7 +17,6 @@ var contextPath = '<%=request.getScheme()+"://"+request.getServerName()+":"+requ
 	String type = request.getParameter("type");
 	String money = request.getParameter("money");
 	String url = "";
-
 	TreeMap<String,String> allParam = new TreeMap<String,String>();
 	allParam.put("name", "测试商品");
 	allParam.put("money", money);

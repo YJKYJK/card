@@ -69,6 +69,10 @@
                 operTm=#{operTm},
             </if>
 
+            <if test="num!=null and num!=''">
+                num=#{num}
+            </if>
+
         </trim>
 
     </update>

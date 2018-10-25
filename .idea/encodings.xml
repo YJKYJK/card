@@ -4,8 +4,7 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/codegenerator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eopay_demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pay" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/userManage" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/userManage/src/main/resources/pay-SDK/JAVA-SDK/eopay_demo/src/cn/eopay/common/util/PayConfig.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/userManage/src/main/resources/pay-SDK/JAVA-SDK/eopay_demo/src/cn/eopay/common/util/PayUtil.java" charset="GBK" />
   </component>
 </project>

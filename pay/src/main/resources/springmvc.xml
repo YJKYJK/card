@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.yanyan.card"></context:component-scan>
+
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8"/>
+            </bean>
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <!--数据转换类型-->
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>application/json;charset=UTF-8</value>
+                        <value>text/html;charset=UTF-8</value>
+                        <value>text/plain;charset=UTF-8</value>
+                    </list>
+                </property>
+                <property name="features">
+                    <array value-type="com.alibaba.fastjson.serializer.SerializerFeature">
+                        <value>DisableCircularReferenceDetect</value>
+                        <value>WriteDateUseDateFormat</value>
+                    </array>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <bean id="freemarkConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+
+        <property name="templateLoaderPath" value="/"></property>
+        <property name="defaultEncoding" value="utf-8"></property>
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_update_delay">10</prop>
+                <prop key="locale">zh_CN</prop>
+                <!--<prop key="date_formart">yyyy-MM-dd</prop>-->
+                <!--<prop key="number_format">#.##</prop>-->
+                <prop key="classic_compatible">true</prop>
+                <!--<prop key="template_exception_handler">com.yanyan.card.exception.FreemarkerExceptionHander</prop>-->
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"></property>
+        <property name="suffix" value=".ftl"></property>
+        <property name="contentType" value="text/html;charset=utf-8"></property>
+        <property name="exposeRequestAttributes" value="true"></property>
+        <property name="exposeSessionAttributes" value="true"></property>
+        <property name="exposeSpringMacroHelpers" value="true"></property>
+        <property name="requestContextAttribute" value="request"></property>
+    </bean>
+
+    <!--<bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">-->
+        <!--<property name="prefix" value="/view/"></property>-->
+        <!--<property name="suffix" value=".html"></property>-->
+    <!--</bean>-->
+
+
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix" value="/view/"></property>-->
+        <!--<property name="suffix" value=".html"></property>-->
+    <!--</bean>-->
+
+    <!--配置对静态文件的处理方式-->
+    <mvc:default-servlet-handler />
+
+
+
+</beans>

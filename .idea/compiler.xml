@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="codegenerator" />
         <module name="eopay_demo" />
+        <module name="pay" />
         <module name="userManage" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
       <module name="card" target="1.8" />
       <module name="codegenerator" target="1.8" />
       <module name="eopay_demo" target="1.7" />
+      <module name="pay" target="1.7" />
       <module name="userManage" target="1.8" />
     </bytecodeTargetLevel>
   </component>

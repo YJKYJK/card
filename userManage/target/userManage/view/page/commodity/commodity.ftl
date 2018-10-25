@@ -31,6 +31,7 @@
         <button class="btn btn-primary" id="add">增加</button>
         <button class="btn btn-info" id="modify">修改</button>
         <button class="btn btn-warning" id="remove">删除</button>
+        <button class="btn btn-warning" id="kami">卡密管理</button>
     </div>
     <thead>
     <tr>

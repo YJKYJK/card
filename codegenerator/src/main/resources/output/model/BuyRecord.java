@@ -20,8 +20,16 @@ public class BuyRecord implements Serializable {
     private Date buyTm;
     //价格
     private BigDecimal price;
+    //购买用户名
+    private String userName;
     //用户id
     private String userId;
+    //用户未登录时购买
+    private String userKey;
+    //商家id
+    private String merchantId;
+    //商家名称
+    private String merchantName;
 
 
     public void setBuyId(String buyId) {
@@ -80,11 +88,43 @@ public class BuyRecord implements Serializable {
         return this.price;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
     public void setUserId(String userId) {
         this.userId = userId;
     }
 
     public String getUserId() {
         return this.userId;
+    }
+
+    public void setUserKey(String userKey) {
+        this.userKey = userKey;
+    }
+
+    public String getUserKey() {
+        return this.userKey;
+    }
+
+    public void setMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+    }
+
+    public String getMerchantId() {
+        return this.merchantId;
+    }
+
+    public void setMerchantName(String merchantName) {
+        this.merchantName = merchantName;
+    }
+
+    public String getMerchantName() {
+        return this.merchantName;
     }
 }

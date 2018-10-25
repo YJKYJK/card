@@ -9,6 +9,7 @@ import com.yanyan.card.util.Page;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 import java.util.*;
 
 /**
@@ -120,4 +121,20 @@ public class CommdityInfoServiceImpl implements CommdityInfoService {
     public CommodityInfo getCommodityById(String commodityId) {
         return commodityInfoMapper.getCommodityById(commodityId);
     }
+
+    /**
+     * 根据商品数量和商品ID获取商品价格
+     * @param commodityId
+     * @param num
+     * @return
+     */
+    @Override
+    public BigDecimal getTotalPrice(String commodityId, Integer num) {
+        CommodityInfo commodity = commodityInfoMapper.getCommodityById(commodityId);
+        BigDecimal totalPrice=commodity.getPrice();
+        totalPrice= totalPrice.multiply(BigDecimal.valueOf(num));
+        return totalPrice;
+    }
+
+
 }

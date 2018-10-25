@@ -19,6 +19,8 @@
 
 <a href="/commodity/gotoCommodity">商品管理</a>
 
+<a href="/kami/gotoKami">卡密管理</a>
+
 
 
 

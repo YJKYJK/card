@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.dao.mapper.CommodityDetailMapper">
+
+    <select id="getCommodityDetailById" resultType="CommodityDetail">
+        select
+                commodityId as commodityId,         <!--商品ID-->
+                cardNumber as cardNumber,         <!--卡号-->
+                cardPassword as cardPassword,         <!--卡密-->
+                isSell as isSell,         <!--是否出售-->
+                createTm as createTm,         <!--创建时间-->
+                sellTm as sellTm,         <!--出售时间-->
+                cardId as cardId,         <!--id -->
+                merchantId as merchantId          <!--商家id-->
+        from commodity_detail
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getCommodityDetailListByMap" resultType="CommodityDetail"
+            parameterType="java.util.Map">
+            select
+                commodityId as commodityId,      <!--商品ID-->
+                cardNumber as cardNumber,      <!--卡号-->
+                cardPassword as cardPassword,      <!--卡密-->
+                isSell as isSell,      <!--是否出售-->
+                createTm as createTm,      <!--创建时间-->
+                sellTm as sellTm,      <!--出售时间-->
+                cardId as cardId,      <!--id -->
+                merchantId as merchantId       <!--商家id-->
+            from commodity_detail
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                    and commodityId=#{commodityId}
+                </if>
+                <if test="cardNumber != null and cardNumber!=''">
+                    and cardNumber=#{cardNumber}
+                </if>
+                <if test="cardPassword != null and cardPassword!=''">
+                    and cardPassword=#{cardPassword}
+                </if>
+                <if test="isSell != null and isSell!=''">
+                    and isSell=#{isSell}
+                </if>
+                <if test="createTm != null and createTm!=''">
+                    and createTm=#{createTm}
+                </if>
+                <if test="sellTm != null and sellTm!=''">
+                    and sellTm=#{sellTm}
+                </if>
+                <if test="cardId != null and (cardId!='' or cardId==0)">
+                    and cardId=#{cardId}
+                </if>
+                <if test="merchantId != null and merchantId!=''">
+                    and merchantId=#{merchantId}
+                </if>
+        </trim>
+        order by creationDate desc
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getCommodityDetailCountByMap" resultType="Integer" parameterType="java.util.Map">
+        select count(*) from commodity_detail
+        <trim prefix="where" prefixOverrides="and | or">
+                    <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                        and commodityId=#{commodityId}
+                    </if>
+                    <if test="cardNumber != null and cardNumber!=''">
+                        and cardNumber=#{cardNumber}
+                    </if>
+                    <if test="cardPassword != null and cardPassword!=''">
+                        and cardPassword=#{cardPassword}
+                    </if>
+                    <if test="isSell != null and isSell!=''">
+                        and isSell=#{isSell}
+                    </if>
+                    <if test="createTm != null and createTm!=''">
+                        and createTm=#{createTm}
+                    </if>
+                    <if test="sellTm != null and sellTm!=''">
+                        and sellTm=#{sellTm}
+                    </if>
+                    <if test="cardId != null and (cardId!='' or cardId==0)">
+                        and cardId=#{cardId}
+                    </if>
+                    <if test="merchantId != null and merchantId!=''">
+                        and merchantId=#{merchantId}
+                    </if>
+        </trim>
+    </select>
+
+    <insert id="saveCommodityDetail" parameterType="CommodityDetail">
+        insert into commodity_detail(
+            commodityId ,      <!--商品ID-->
+            cardNumber ,      <!--卡号-->
+            cardPassword ,      <!--卡密-->
+            isSell ,      <!--是否出售-->
+            createTm ,      <!--创建时间-->
+            sellTm ,      <!--出售时间-->
+            cardId ,      <!--id -->
+            merchantId       <!--商家id-->
+        )
+        values(
+                    #{commodityId} ,      <!--商品ID-->
+                    #{cardNumber} ,      <!--卡号-->
+                    #{cardPassword} ,      <!--卡密-->
+                    #{isSell} ,      <!--是否出售-->
+                    #{createTm} ,      <!--创建时间-->
+                    #{sellTm} ,      <!--出售时间-->
+                    #{cardId} ,      <!--id -->
+                    #{merchantId}       <!--商家id-->
+        )
+    </insert>
+
+    <update id="modifyCommodityDetail" parameterType="CommodityDetail">
+        update commodity_detail
+        <trim prefix="set" suffixOverrides="," suffix="where id= #{id}">
+                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                     commodityId=#{commodityId},
+                </if>
+                <if test="cardNumber != null and cardNumber!=''">
+                     cardNumber=#{cardNumber},
+                </if>
+                <if test="cardPassword != null and cardPassword!=''">
+                     cardPassword=#{cardPassword},
+                </if>
+                <if test="isSell != null and isSell!=''">
+                     isSell=#{isSell},
+                </if>
+                <if test="createTm != null and createTm!=''">
+                     createTm=#{createTm},
+                </if>
+                <if test="sellTm != null and sellTm!=''">
+                     sellTm=#{sellTm},
+                </if>
+                <if test="cardId != null and (cardId!='' or cardId==0)">
+                     cardId=#{cardId},
+                </if>
+                <if test="merchantId != null and merchantId!=''">
+                     merchantId=#{merchantId},
+                </if>
+        </trim>
+    </update>
+
+    <delete id="removeCommodityDetailById" parameterType="Long">
+        delete from commodity_detail where id = #{id}
+    </delete>
+</mapper>

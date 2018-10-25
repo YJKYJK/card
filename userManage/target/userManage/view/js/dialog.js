@@ -28,14 +28,16 @@ $.dialogTitle=function(title, message,btn) {
 };
 
 /**
+ *
  * 远程操作弹框
- * @param title
- * @param viewurl
- * @param submit
- * @param close
- * @param fromurl
- * @param fromid
- * @param fn
+ * @param title 标题
+ * @param viewurl 加载的页面
+ * @param viewdata 加载页面时提交的数据
+ * @param submit 提交按钮
+ * @param close  关闭按钮
+ * @param fromurl 提交的地址
+ * @param fromid 提交from表单的ID
+ * @param fn  回调函数
  */
 $.dialogView=function (title,viewurl,viewdata,submit,close,fromurl,fromid,fn) {
     BootstrapDialog.show({

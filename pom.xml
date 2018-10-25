@@ -11,6 +11,7 @@
     <modules>
         <module>userManage</module>
         <module>eopay_demo</module>
+        <module>pay</module>
     </modules>
 
 

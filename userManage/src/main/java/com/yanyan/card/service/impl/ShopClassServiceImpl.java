@@ -136,4 +136,6 @@ public class ShopClassServiceImpl implements ShopClassService{
         return this.getClassList(merchantInfo);
     }
 
+
+
 }

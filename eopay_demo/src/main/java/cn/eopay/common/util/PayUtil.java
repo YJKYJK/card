@@ -74,11 +74,11 @@ public class PayUtil {
 		String name = request.getParameter("name");
 		if("GET".equalsIgnoreCase(request.getMethod())
 				&&isWindow()){
-			try {
-				name = new String(name.getBytes("ISO-8859-1"),"utf-8");
-			} catch (UnsupportedEncodingException e) {
-				e.printStackTrace();
-			}
+//			try {
+//				name = new String(name.getBytes("ISO-8859-1"),"utf-8");
+//			} catch (UnsupportedEncodingException e) {
+//				e.printStackTrace();
+//			}
 		}
 		name = "name=" + name+"&";
 		String out_trade_no = "out_trade_no=" + request.getParameter("out_trade_no")+"&";

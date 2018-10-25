@@ -13,7 +13,11 @@
                 cardPassword as cardPassword,         <!--卡密 密码-->
                 buyTm as buyTm,         <!--购买时间-->
                 price as price,         <!--价格-->
-                userId as userId          <!--用户id-->
+                userName as userName,         <!--购买用户名-->
+                userId as userId,         <!--用户id-->
+                userKey as userKey,         <!--用户未登录时购买-->
+                merchantId as merchantId,         <!--商家id-->
+                merchantName as merchantName          <!--商家名称-->
         from buy_record
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -32,7 +36,11 @@
                 cardPassword as cardPassword,      <!--卡密 密码-->
                 buyTm as buyTm,      <!--购买时间-->
                 price as price,      <!--价格-->
-                userId as userId       <!--用户id-->
+                userName as userName,      <!--购买用户名-->
+                userId as userId,      <!--用户id-->
+                userKey as userKey,      <!--用户未登录时购买-->
+                merchantId as merchantId,      <!--商家id-->
+                merchantName as merchantName       <!--商家名称-->
             from buy_record
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="buyId != null and buyId!=''">
@@ -56,8 +64,20 @@
                 <if test="price != null and price!=''">
                     and price=#{price}
                 </if>
+                <if test="userName != null and userName!=''">
+                    and userName=#{userName}
+                </if>
                 <if test="userId != null and userId!=''">
                     and userId=#{userId}
+                </if>
+                <if test="userKey != null and userKey!=''">
+                    and userKey=#{userKey}
+                </if>
+                <if test="merchantId != null and merchantId!=''">
+                    and merchantId=#{merchantId}
+                </if>
+                <if test="merchantName != null and merchantName!=''">
+                    and merchantName=#{merchantName}
                 </if>
         </trim>
         order by creationDate desc
@@ -90,8 +110,20 @@
                     <if test="price != null and price!=''">
                         and price=#{price}
                     </if>
+                    <if test="userName != null and userName!=''">
+                        and userName=#{userName}
+                    </if>
                     <if test="userId != null and userId!=''">
                         and userId=#{userId}
+                    </if>
+                    <if test="userKey != null and userKey!=''">
+                        and userKey=#{userKey}
+                    </if>
+                    <if test="merchantId != null and merchantId!=''">
+                        and merchantId=#{merchantId}
+                    </if>
+                    <if test="merchantName != null and merchantName!=''">
+                        and merchantName=#{merchantName}
                     </if>
         </trim>
     </select>
@@ -105,7 +137,11 @@
             cardPassword ,      <!--卡密 密码-->
             buyTm ,      <!--购买时间-->
             price ,      <!--价格-->
-            userId       <!--用户id-->
+            userName ,      <!--购买用户名-->
+            userId ,      <!--用户id-->
+            userKey ,      <!--用户未登录时购买-->
+            merchantId ,      <!--商家id-->
+            merchantName       <!--商家名称-->
         )
         values(
                     #{buyId} ,      <!--购买记录id-->
@@ -115,7 +151,11 @@
                     #{cardPassword} ,      <!--卡密 密码-->
                     #{buyTm} ,      <!--购买时间-->
                     #{price} ,      <!--价格-->
-                    #{userId}       <!--用户id-->
+                    #{userName} ,      <!--购买用户名-->
+                    #{userId} ,      <!--用户id-->
+                    #{userKey} ,      <!--用户未登录时购买-->
+                    #{merchantId} ,      <!--商家id-->
+                    #{merchantName}       <!--商家名称-->
         )
     </insert>
 
@@ -143,8 +183,20 @@
                 <if test="price != null and price!=''">
                      price=#{price},
                 </if>
+                <if test="userName != null and userName!=''">
+                     userName=#{userName},
+                </if>
                 <if test="userId != null and userId!=''">
                      userId=#{userId},
+                </if>
+                <if test="userKey != null and userKey!=''">
+                     userKey=#{userKey},
+                </if>
+                <if test="merchantId != null and merchantId!=''">
+                     merchantId=#{merchantId},
+                </if>
+                <if test="merchantName != null and merchantName!=''">
+                     merchantName=#{merchantName},
                 </if>
         </trim>
     </update>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/eopay_demo" />
+    <file type="web" url="file://$PROJECT_DIR$/pay" />
     <file type="web" url="file://$PROJECT_DIR$/userManage" />
   </component>
   <component name="MavenProjectsManager">

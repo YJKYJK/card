@@ -14,7 +14,7 @@
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>用户登录</h1>
+<h1>商家登录</h1>
 <div class="input-group centers" style="width: 80%">
     <form class="form-horizontal" id="loginForm" role="form">
         <div class="input-group tops" >

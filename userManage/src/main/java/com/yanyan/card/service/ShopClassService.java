@@ -22,5 +22,6 @@ public interface ShopClassService {
     boolean removeGoodsClassById(GoodsClass goodsClass);
 
     List<GoodsClass> getClassList(MerchantInfo merchantInfo);
+
     List<GoodsClass>getClassById(String merchantId);
 }
