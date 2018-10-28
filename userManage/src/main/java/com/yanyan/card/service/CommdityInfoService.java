@@ -27,4 +27,10 @@ public interface CommdityInfoService {
     public CommodityInfo getCommodityById(String commodityId);
 
     public BigDecimal getTotalPrice(String commodityId,Integer num);
+
+    public Boolean addNum(String commodityId,Integer num);
+
+    Boolean modifyNum(String commodityId, Integer number);
+
+
 }

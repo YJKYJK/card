@@ -1,7 +1,9 @@
 package com.yanyan.card.controller;
 
+import com.yanyan.card.bean.BuyRecord;
 import com.yanyan.card.bean.CommodityInfo;
 import com.yanyan.card.bean.MerchantInfo;
+import com.yanyan.card.service.BuyRecordService;
 import com.yanyan.card.service.CommdityInfoService;
 import com.yanyan.card.service.MerchantInfoService;
 import com.yanyan.card.service.ShopClassService;
@@ -30,6 +32,8 @@ public class shopContorller {
     private ShopClassService shopClassService;
     @Resource
     private CommdityInfoService commdityInfoService;
+    @Resource
+    private BuyRecordService buyRecordService;
 
     /**
      * 跳转到商家商店
@@ -84,6 +88,12 @@ public class shopContorller {
         return commdityInfoService.getCommodityById(commodityId);
     }
 
+    /**
+     * 根据商品ID和购买数量获取价格
+     * @param commodityId
+     * @param number
+     * @return
+     */
     @RequestMapping("/getTotalPrice")
     @ResponseBody
     public BigDecimal getTotalPrice(String commodityId, Integer number){
@@ -91,5 +101,21 @@ public class shopContorller {
         return  totalPrice;
     }
 
+    /**
+     * 获取订单信息
+     * @param param
+     * @return
+     */
+    @RequestMapping("/getBuyRecord")
+    @ResponseBody
+   public List<BuyRecord> getBuyRecord(String param){
+       List<BuyRecord> buyRecordListByMap = buyRecordService.getBuyRecordListByMap(param);
+       return buyRecordListByMap;
+   }
+
+    @RequestMapping("/gotobuyRecord")
+   public String gotobuyRecord(){
+       return "page/shop/buyRecord";
+   }
 
 }

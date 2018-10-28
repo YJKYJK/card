@@ -31,7 +31,7 @@
                 isSell as isSell,      <!--是否出售-->
                 createTm as createTm,      <!--创建时间-->
                 sellTm as sellTm,      <!--出售时间-->
-                cardId as cardId,      <!--id -->
+                cardId as cardId,       <!--id -->
                 merchantId as merchantId       <!--商家id-->
             from commodity_detail
         <trim prefix="where" prefixOverrides="and | or">
@@ -60,41 +60,11 @@
                     and merchantId=#{merchantId}
                 </if>
         </trim>
-        order by creationDate desc
-        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
-            limit #{beginPos},#{pageSize}
-        </if>
+        order by createTm desc
+            limit #{pageSize}
     </select>
 
-    <select id="getCommodityDetailCountByMap" resultType="Integer" parameterType="java.util.Map">
-        select count(*) from commodity_detail
-        <trim prefix="where" prefixOverrides="and | or">
-                    <if test="commodityId != null and (commodityId!='' or commodityId==0)">
-                        and commodityId=#{commodityId}
-                    </if>
-                    <if test="cardNumber != null and cardNumber!=''">
-                        and cardNumber=#{cardNumber}
-                    </if>
-                    <if test="cardPassword != null and cardPassword!=''">
-                        and cardPassword=#{cardPassword}
-                    </if>
-                    <if test="isSell != null and isSell!=''">
-                        and isSell=#{isSell}
-                    </if>
-                    <if test="createTm != null and createTm!=''">
-                        and createTm=#{createTm}
-                    </if>
-                    <if test="sellTm != null and sellTm!=''">
-                        and sellTm=#{sellTm}
-                    </if>
-                    <if test="cardId != null and (cardId!='' or cardId==0)">
-                        and cardId=#{cardId}
-                    </if>
-                    <if test="merchantId != null and merchantId!=''">
-                        and merchantId=#{merchantId}
-                    </if>
-        </trim>
-    </select>
+
 
     <insert id="saveCommodityDetail" parameterType="CommodityDetail">
         insert into commodity_detail(
@@ -172,4 +142,32 @@
             )
         </foreach>
     </insert>
+
+    <update id="updateList" parameterType="java.util.List">
+        <foreach collection="list" item="item" separator=";">
+            UPDATE commodity_detail
+            <set>
+                <if test="isSell != null and isSell!=''">
+                    isSell=#{item.isSell},
+                </if>
+                <if test="sellTm != null and sellTm!=''">
+                    sellTm=#{item.sellTm},
+                </if>
+            </set>
+            WHERE cardId=#{item.cardId}
+        </foreach>
+    </update>
+
+
+    <update id="update" parameterType="CommodityDetail">
+        UPDATE commodity_detail
+        <trim prefix="set" suffixOverrides="," suffix="where cardId= #{cardId}">
+        <if test="isSell != null and isSell!=''">
+            isSell=#{isSell},
+        </if>
+        <if test="sellTm != null and sellTm!=''">
+            sellTm=#{sellTm}
+        </if>
+        </trim>
+    </update>
 </mapper>

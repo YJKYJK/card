@@ -30,7 +30,6 @@
 </body>
 <script>
 $("#add").on("click",function () {
-    debugger
     $.dialogView("卡密添加","/kami/gotoAddKami","","添加卡密",
             "关闭","/kami/addKami","addKami",function (res) {
                alert(res);

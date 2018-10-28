@@ -89,4 +89,27 @@
         select * from commodity_info WHERE commodityId=#{commodityId};
     </select>
 
+
+    <update id="modifyCommodityNum" parameterType="CommodityInfo">
+        update commodity_info
+        <trim prefix="set" suffixOverrides="," suffix="where commodityId= #{commodityId}">
+
+
+            <if test="pic != null and pic!=''">
+                pic=#{pic},
+            </if>
+
+            <if test="operTm != null and operTm!=''">
+                operTm=#{operTm},
+            </if>
+
+            <if test="num!=null and num!=''">
+                num=#{num}
+            </if>
+
+        </trim>
+
+    </update>
+
+
 </mapper>

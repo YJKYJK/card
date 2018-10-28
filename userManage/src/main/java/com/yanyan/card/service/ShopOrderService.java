@@ -11,4 +11,6 @@ public interface ShopOrderService {
    boolean saveShopOrder(ShopOrder shopOrder);
 
    boolean modifyShopOrder(ShopOrder shopOrder);
+
+   boolean modifyAll(ShopOrder shopOrder);
 }

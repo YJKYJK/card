@@ -99,8 +99,18 @@ public class MerchantInfoController{
     @RequestMapping("/gotoUserInfo")
     public String gotoUserInfo(HttpServletRequest request, Model model){
         Object merchantInfo = request.getSession().getAttribute("merchantInfo");
+
+
         if(EmptyUtils.isNotEmpty(merchantInfo)){
+            String contextPath = request.getScheme() + "://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath();
+            if(request.getServerPort()==80 || 443 == request.getServerPort()){
+                contextPath = request.getScheme() +"://"+request.getServerName()+request.getContextPath();
+            }
+            model.addAttribute("contextPath",contextPath);
             model.addAttribute("o",merchantInfo);
+
+
+
             return "page/merchant/merchantInfo";
         }
 

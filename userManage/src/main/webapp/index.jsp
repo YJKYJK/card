@@ -3,7 +3,7 @@
 <h2>Hello World!</h2>
 
 <script>
-   location.href='http://localhost:8080/shop/gotoShop/154010185212168464cdd-e24';
+   location.href='/merchant/gotoUserInfo';
 </script>
 </body>
 

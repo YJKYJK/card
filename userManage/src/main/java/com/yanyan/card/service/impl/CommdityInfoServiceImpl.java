@@ -6,6 +6,7 @@ import com.yanyan.card.mapper.CommodityInfoMapper;
 import com.yanyan.card.service.CommdityInfoService;
 import com.yanyan.card.util.EmptyUtils;
 import com.yanyan.card.util.Page;
+import io.swagger.models.auth.In;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -123,7 +124,7 @@ public class CommdityInfoServiceImpl implements CommdityInfoService {
     }
 
     /**
-     * 根据商品数量和商品ID获取商品价格
+     * 根据商品数量和商品ID获取商品总价格
      * @param commodityId
      * @param num
      * @return
@@ -136,5 +137,38 @@ public class CommdityInfoServiceImpl implements CommdityInfoService {
         return totalPrice;
     }
 
+    /**
+     * 增加商品库存
+     * @param commodityId
+     * @param num
+     * @return
+     */
+    public Boolean addNum(String commodityId,Integer num){
+        CommodityInfo commodity = this.getCommodityById(commodityId);
+        Integer newNum= commodity.getNum()+num;
+        commodity.setNum(newNum);
+        boolean res = this.modifyCommodity(commodity);
+        if (res){
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 根据发货情况减少库存
+     * @param commodityId
+     * @param number
+     * @return
+     */
+    public Boolean modifyNum(String commodityId, Integer number){
+        CommodityInfo commodity = this.getCommodityById(commodityId);
+        Integer newNum= commodity.getNum()-number;
+        commodity.setNum(newNum);
+        boolean res = this.modifyCommodity(commodity);
+        if (res){
+            return true;
+        }
+        return false;
+    }
 
 }

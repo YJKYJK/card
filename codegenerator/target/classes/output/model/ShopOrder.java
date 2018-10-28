@@ -11,7 +11,9 @@ public class ShopOrder implements Serializable {
     //商品类型名称
     private Integer classId;
     //商品ID
-    private Integer commodityId;
+    private String commodityId;
+    //
+    private String commodityName;
     //商品数量
     private Integer number;
     //商品价格
@@ -48,12 +50,20 @@ public class ShopOrder implements Serializable {
         return this.classId;
     }
 
-    public void setCommodityId(Integer commodityId) {
+    public void setCommodityId(String commodityId) {
         this.commodityId = commodityId;
     }
 
-    public Integer getCommodityId() {
+    public String getCommodityId() {
         return this.commodityId;
+    }
+
+    public void setCommodityName(String commodityName) {
+        this.commodityName = commodityName;
+    }
+
+    public String getCommodityName() {
+        return this.commodityName;
     }
 
     public void setNumber(Integer number) {

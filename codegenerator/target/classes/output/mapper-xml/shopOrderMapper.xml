@@ -9,6 +9,7 @@
                 orderId as orderId,         <!---->
                 classId as classId,         <!--商品类型名称-->
                 commodityId as commodityId,         <!--商品ID-->
+                commodityName as commodityName,         <!---->
                 number as number,         <!--商品数量-->
                 price as price,         <!--商品价格-->
                 totalPrice as totalPrice,         <!--商品总价-->
@@ -32,6 +33,7 @@
                 orderId as orderId,      <!---->
                 classId as classId,      <!--商品类型名称-->
                 commodityId as commodityId,      <!--商品ID-->
+                commodityName as commodityName,      <!---->
                 number as number,      <!--商品数量-->
                 price as price,      <!--商品价格-->
                 totalPrice as totalPrice,      <!--商品总价-->
@@ -49,8 +51,11 @@
                 <if test="classId != null and (classId!='' or classId==0)">
                     and classId=#{classId}
                 </if>
-                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                <if test="commodityId != null and commodityId!=''">
                     and commodityId=#{commodityId}
+                </if>
+                <if test="commodityName != null and commodityName!=''">
+                    and commodityName=#{commodityName}
                 </if>
                 <if test="number != null and (number!='' or number==0)">
                     and number=#{number}
@@ -95,8 +100,11 @@
                     <if test="classId != null and (classId!='' or classId==0)">
                         and classId=#{classId}
                     </if>
-                    <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                    <if test="commodityId != null and commodityId!=''">
                         and commodityId=#{commodityId}
+                    </if>
+                    <if test="commodityName != null and commodityName!=''">
+                        and commodityName=#{commodityName}
                     </if>
                     <if test="number != null and (number!='' or number==0)">
                         and number=#{number}
@@ -133,6 +141,7 @@
             orderId ,      <!---->
             classId ,      <!--商品类型名称-->
             commodityId ,      <!--商品ID-->
+            commodityName ,      <!---->
             number ,      <!--商品数量-->
             price ,      <!--商品价格-->
             totalPrice ,      <!--商品总价-->
@@ -147,6 +156,7 @@
                     #{orderId} ,      <!---->
                     #{classId} ,      <!--商品类型名称-->
                     #{commodityId} ,      <!--商品ID-->
+                    #{commodityName} ,      <!---->
                     #{number} ,      <!--商品数量-->
                     #{price} ,      <!--商品价格-->
                     #{totalPrice} ,      <!--商品总价-->
@@ -168,8 +178,11 @@
                 <if test="classId != null and (classId!='' or classId==0)">
                      classId=#{classId},
                 </if>
-                <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                <if test="commodityId != null and commodityId!=''">
                      commodityId=#{commodityId},
+                </if>
+                <if test="commodityName != null and commodityName!=''">
+                     commodityName=#{commodityName},
                 </if>
                 <if test="number != null and (number!='' or number==0)">
                      number=#{number},

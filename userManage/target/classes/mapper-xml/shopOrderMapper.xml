@@ -195,4 +195,8 @@
     <delete id="removeShopOrderById" parameterType="Long">
         delete from shop_order where id = #{id}
     </delete>
+
+    <select id="getOrderById"  parameterType="ShopOrder" resultType="ShopOrder">
+        SELECT * FROM shop_order WHERE orderId=#{orderId}
+    </select>
 </mapper>

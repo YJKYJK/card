@@ -37,4 +37,6 @@ public interface CommodityInfoMapper {
 
 	CommodityInfo getCommodityById(String commodityId);
 
+	Integer modifyCommodityNum(CommodityInfo commodityInfo);
+
 }

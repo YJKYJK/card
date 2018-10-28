@@ -22,7 +22,7 @@ public class PayController {
     private ShopOrderService shopOrderService;
 
     @RequestMapping("/gotopay")
-    public String gotopay(HttpServletRequest request, ShopOrder shopOrder,Model model){
+    public String gotopay(HttpServletRequest request, ShopOrder shopOrder, Model model){
         shopOrder=shopOrderService.getFullShopOrder(shopOrder);
         String url="";
         String type=shopOrder.getPayType();
@@ -58,19 +58,18 @@ public class PayController {
         String money = request.getParameter("money");
         String type = request.getParameter("type");
         if(PayUtil.checkKey(request)){
-            model.addAttribute("success","签名验证成功");
             if("TRADE_SUCCESS".equals(trade_status)){
                 //用户支付成功， 商户在下面进行支付成功后的逻辑处理
                 ShopOrder shopOrder=new ShopOrder();
                 shopOrder.setOrderId(out_trade_no);
-                shopOrder.setIsPay("Y");
-                shopOrderService.modifyShopOrder(shopOrder);
+                shopOrderService.modifyAll(shopOrder);
                 model.addAttribute("paySuccess","支付成功");
+
 
             }
         }else{
             //验签失败 不作处理
-            model.addAttribute("error","签名验证成功");
+            model.addAttribute("error","签名验证失败");
         }
         return "payasnyView";
     }

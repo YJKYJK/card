@@ -5,6 +5,6 @@ public class PayConfig {
 	public static String KEY = "150OxF1v51RJ2i15RjI0211t4IxJ42IK";//亿发云支付商户的密钥
 	public static String PAY_URL = "https://mpay.178v.cn/submit.php";//亿发云支付网关
 
-	public static String NOTIFY_URL = "http://localhost:8080/pay/asnyView";//商户网站的异步通知地址
-	public static String RETURN_URL = "http://localhost:8080/pay/asnyView";//商户网站的同步跳转地址
+	public static String NOTIFY_URL = "http://47.107.120.44:8080/pay/asnyView";//商户网站的异步通知地址
+	public static String RETURN_URL = "http://47.107.120.44:8080/pay/asnyView";//商户网站的同步跳转地址
 }

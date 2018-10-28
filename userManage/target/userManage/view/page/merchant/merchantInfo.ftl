@@ -14,6 +14,8 @@
 </head>
 <body>
 
+<div><a href="${contextPath}/shop/gotoShop/${o.merchantId}">进入商店</a></div>
+
 
 <a href="/shopClass/gotoShopClass">商品类别管理</a>
 

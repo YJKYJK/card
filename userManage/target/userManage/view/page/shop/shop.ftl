@@ -16,6 +16,8 @@
 </head>
 <body>
 <h2 class="centers">${m.userName}的店铺</h2>
+<button type="button" class="btn btn-primary btn-lg">联系商家</button>
+<button type="button" id="buyRecord" class="btn btn-primary btn-lg">订单查询</button>
 
 <form action="/pay/gotopay" method="post">
 
@@ -29,7 +31,7 @@
 
 <div class="shop">
     <div class="hk">
-        <span class="sp-h">商品分类</span>
+        <span class="sp-h">商品</span>
         <select class="selectpicker form-control nu"  id="commodity" name="commodityId"></select>
     </div>
 </div>
@@ -225,6 +227,10 @@ $("#number").on("change",function () {
         }
     })
 })
+
+    $("#buyRecord").on("click",function () {
+        location.href="/shop/gotobuyRecord";
+    })
 
 
 </script>
