@@ -11,4 +11,6 @@ public interface BuyRecordService {
     public boolean saveBuyRecord(BuyRecord buyRecord);
 
     public List<BuyRecord> getBuyRecordListByMap(String param);
+
+
 }

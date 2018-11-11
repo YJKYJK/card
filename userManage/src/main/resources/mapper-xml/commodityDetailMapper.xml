@@ -65,6 +65,72 @@
     </select>
 
 
+    <select id="getKamiListByMap" resultType="CommodityDetail"
+            parameterType="java.util.Map">
+        select *
+        from commodity_detail
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                and commodityId=#{commodityId}
+            </if>
+            <if test="cardNumber != null and cardNumber!=''">
+                and cardNumber=#{cardNumber}
+            </if>
+            <if test="cardPassword != null and cardPassword!=''">
+                and cardPassword=#{cardPassword}
+            </if>
+            <if test="isSell != null and isSell!=''">
+                and isSell=#{isSell}
+            </if>
+            <if test="createTm != null and createTm!=''">
+                and createTm=#{createTm}
+            </if>
+            <if test="sellTm != null and sellTm!=''">
+                and sellTm=#{sellTm}
+            </if>
+            <if test="cardId != null and (cardId!='' or cardId==0)">
+                and cardId=#{cardId}
+            </if>
+            <if test="merchantId != null and merchantId!=''">
+                and merchantId=#{merchantId}
+            </if>
+        </trim>
+        order by createTm desc
+        limit #{pageNumber},#{pageSize}
+    </select>
+
+
+    <select id="getKamiCountByMap" resultType="Integer" parameterType="java.util.Map">
+        select count(*) from commodity_detail
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                and commodityId=#{commodityId}
+            </if>
+            <if test="cardNumber != null and cardNumber!=''">
+                and cardNumber=#{cardNumber}
+            </if>
+            <if test="cardPassword != null and cardPassword!=''">
+                and cardPassword=#{cardPassword}
+            </if>
+            <if test="isSell != null and isSell!=''">
+                and isSell=#{isSell}
+            </if>
+            <if test="createTm != null and createTm!=''">
+                and createTm=#{createTm}
+            </if>
+            <if test="sellTm != null and sellTm!=''">
+                and sellTm=#{sellTm}
+            </if>
+            <if test="cardId != null and (cardId!='' or cardId==0)">
+                and cardId=#{cardId}
+            </if>
+            <if test="merchantId != null and merchantId!=''">
+                and merchantId=#{merchantId}
+            </if>
+        </trim>
+    </select>
+
+
 
     <insert id="saveCommodityDetail" parameterType="CommodityDetail">
         insert into commodity_detail(
@@ -91,7 +157,8 @@
 
     <update id="modifyCommodityDetail" parameterType="CommodityDetail">
         update commodity_detail
-        <trim prefix="set" suffixOverrides="," suffix="where id= #{id}">
+        <trim prefix="set" suffixOverrides=","
+              suffix="where cardId= #{cardId} and merchantId=#{merchantId}">
                 <if test="commodityId != null and (commodityId!='' or commodityId==0)">
                      commodityId=#{commodityId},
                 </if>
@@ -110,12 +177,6 @@
                 <if test="sellTm != null and sellTm!=''">
                      sellTm=#{sellTm},
                 </if>
-                <if test="cardId != null and (cardId!='' or cardId==0)">
-                     cardId=#{cardId},
-                </if>
-                <if test="merchantId != null and merchantId!=''">
-                     merchantId=#{merchantId},
-                </if>
         </trim>
     </update>
 
@@ -130,7 +191,8 @@
         cardPassword ,      <!--卡密-->
         isSell ,      <!--是否出售-->
         createTm ,      <!--创建时间-->
-        merchantId       <!--商家id-->
+        merchantId,<!--商家id-->
+        commodityName
         ) VALUES
         <foreach collection="list" item="item" index="index" separator=",">
             ( #{item.commodityId} ,      <!--商品ID-->
@@ -138,7 +200,8 @@
             #{item.cardPassword} ,      <!--卡密-->
             #{item.isSell} ,      <!--是否出售-->
             #{item.createTm} ,      <!--创建时间-->
-            #{item.merchantId}
+            #{item.merchantId},
+            #{item.commodityName}
             )
         </foreach>
     </insert>
@@ -170,4 +233,12 @@
         </if>
         </trim>
     </update>
+
+    <delete id="deleteKami" parameterType="CommodityDetail">
+        DELETE FROM commodity_detail where cardId=#{cardId} and merchantId=#{merchantId}
+    </delete>
+
+    <select id="getKamiById" parameterType="CommodityDetail" resultType="CommodityDetail">
+        SELECT * FROM commodity_detail WHERE  cardId=#{cardId} and merchantId=#{merchantId}
+    </select>
 </mapper>

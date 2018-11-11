@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=decice-width,inital-scale=2,maximum-scale=1,minimum-scale=1,minimum-scale=1,user-scalable=no">
-    <title>${m.userName}</title>
+    <title>${shopInfo.shopName}</title>
 
   <link href="/view/css/public.css" rel="stylesheet">
    <link href="/view/css/login.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.bootcss.com/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css" rel="stylesheet">
 
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.min.js"></script>
+    <script src="/view/js/dialog.js"></script>
 
 </head>
 <body>
@@ -19,7 +21,16 @@
 <button type="button" class="btn btn-primary btn-lg">联系商家</button>
 <button type="button" id="buyRecord" class="btn btn-primary btn-lg">订单查询</button>
 
-<form action="/pay/gotopay" method="post">
+
+<div class="shop">
+    <div class="hk">
+        <span class="sp-h">公告</span>
+        <div>${shopInfo.notice}</div>
+    </div>
+</div>
+
+<form action="/pay/gotopay" method="post" id="payfrom">
+
 
 <div class="shop">
     <div class="hk">
@@ -87,9 +98,9 @@
         <dt>支付方式：</dt>
         <dd>
             <select name="payType" class="selectpicker form-control nu">
-                <option value="alipay">支付宝</option>
-                <option value="wxpay">微信</option>
-                <option value="qqpay">QQ钱包</option>
+                <option value="1">支付宝</option>
+                <option value="3">微信</option>
+                <option value="2">QQ钱包</option>
             </select>
             </div>
     </div>
@@ -165,7 +176,7 @@
 
         selectedVal=$('#goodsClass option:selected') .val();
         getShop(selectedVal);
-        getShopdetail();
+        sss();
     });
 
 
@@ -177,8 +188,7 @@
      * 根据商品ID获取商品信息
      * @type {*}
      */
-
-    function getShopdetail() {
+    function sss() {
         var shopId=$('#commodity option:selected') .val();
         if(shopId!=null|| shopId!="undefined"){
 
@@ -202,16 +212,16 @@
         }
 
     }
-    getShopdetail();
+    sss();
     $("#commodity").on("change",function () {
-        getShopdetail();
+        sss();
     });
 
 
-
-
+    /**
+     * 价格
+     */
 $("#number").on("change",function () {
-
     var shopId=$('#commodity option:selected') .val();
     var number=$("#number").val();
     if(number=="" || number==null){
@@ -231,6 +241,25 @@ $("#number").on("change",function () {
     $("#buyRecord").on("click",function () {
         location.href="/shop/gotobuyRecord";
     })
+
+
+    $("#payfrom").on("submit",function () {
+        var userName=$("#userName").val();
+        if(userName.length<6){
+            $.dialogTitle("提示","联系方式必须大于6位数","知道了");
+            return false;
+        }
+
+        var number =$("#number").val();
+       if(number<1){
+           $.dialogTitle("提示","购买数量不能小于1","知道了");
+           return false;
+       }
+
+        return true;
+
+    })
+
 
 
 </script>

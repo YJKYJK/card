@@ -23,6 +23,8 @@ public interface CommdityInfoService {
 
     public List<CommodityInfo> getCommodityByClass(String classId);
 
+    public List<CommodityInfo> getCommodityByUserId(String merchantId);
+
 
     public CommodityInfo getCommodityById(String commodityId);
 
@@ -31,6 +33,8 @@ public interface CommdityInfoService {
     public Boolean addNum(String commodityId,Integer num);
 
     Boolean modifyNum(String commodityId, Integer number);
+
+    Boolean checknum(String commodityId, Integer number);
 
 
 }

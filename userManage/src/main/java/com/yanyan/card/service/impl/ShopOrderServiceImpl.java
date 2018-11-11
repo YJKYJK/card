@@ -94,19 +94,19 @@ public class ShopOrderServiceImpl implements ShopOrderService{
      */
     @Override
     public boolean  modifyAll(ShopOrder shopOrder) {
+        //查询是否已发货
+        if(this.isDelivery(shopOrder)){
+            return true;
+        }
         Date date=new Date();
         // 根据订单id获取该订单详细信息
         ShopOrder fullShopOrder= shopOrderMapper.getOrderById(shopOrder);
         // 将订单更改为已支付4
         fullShopOrder.setIsPay("Y");
+        //将订单改为已发货
+        fullShopOrder.setIsDelivery("Y");
         boolean pay = modifyShopOrder(fullShopOrder);
         if (!pay){
-            return false;
-        }
-        //减少库存
-        Boolean modifyNum = commdityInfoService.modifyNum(fullShopOrder.getCommodityId(),
-                fullShopOrder.getNumber());
-        if(!modifyNum){
             return false;
         }
 
@@ -115,6 +115,7 @@ public class ShopOrderServiceImpl implements ShopOrderService{
                 fullShopOrder.getNumber());
 
         for (CommodityDetail c:commodityDetails) {
+
             //添加订单
             BuyRecord buyRecord=new BuyRecord();
             //订单号
@@ -138,6 +139,28 @@ public class ShopOrderServiceImpl implements ShopOrderService{
             }
         }
 
+        //减少库存
+        Boolean modifyNum = commdityInfoService.modifyNum(fullShopOrder.getCommodityId(),
+                commodityDetails.size());
+        if(!modifyNum){
+            return false;
+        }
+
         return true;
+    }
+
+
+    /**
+     * 查询该订单是否已经发货
+     * @param shopOrder
+     * @return
+     */
+    @Override
+    public boolean isDelivery(ShopOrder shopOrder) {
+        ShopOrder order= shopOrderMapper.getOrderById(shopOrder);
+        if(order.getIsDelivery().equals("Y")){
+            return true;
+        }
+        return false;
     }
 }

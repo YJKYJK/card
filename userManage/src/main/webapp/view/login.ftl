@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=decice-width,inital-scale=2,maximum-scale=1,minimum-scale=1,minimum-scale=1,user-scalable=no">
     <title>账号登录</title>
 
-    <!--<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">-->
-    <!--<script src="js/jquery-1.9.1.min.js" type="application/javascript"></script>-->
-    <!--<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>-->
-  <link rel="stylesheet" href="/view/css/login.css">
+    <link rel="stylesheet" href="/view/css/login.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <#include "/view/header.ftl"/>
 </head>
 <body>
 <h1>用户登录</h1>
@@ -42,9 +40,6 @@
         <div class="input-group sty-a" style="width: 100%">
             <a href="/user/getoRetister">我要注册</a><nbsp>  <a>忘记密码</a>
         </div>
-
-
-
 
     </form>
 </div>

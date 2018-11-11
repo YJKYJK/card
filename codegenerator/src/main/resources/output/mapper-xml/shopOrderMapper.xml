@@ -18,7 +18,8 @@
                 merchantId as merchantId,         <!--商家id-->
                 buyUser as buyUser,         <!--购买人(用于用户未登录)-->
                 buyUserId as buyUserId,         <!--购买人id-->
-                payType as payType          <!---->
+                payType as payType,         <!---->
+                isDelivery as isDelivery          <!--是否已发货-->
         from shop_order
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -42,7 +43,8 @@
                 merchantId as merchantId,      <!--商家id-->
                 buyUser as buyUser,      <!--购买人(用于用户未登录)-->
                 buyUserId as buyUserId,      <!--购买人id-->
-                payType as payType       <!---->
+                payType as payType,      <!---->
+                isDelivery as isDelivery       <!--是否已发货-->
             from shop_order
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="orderId != null and orderId!=''">
@@ -83,6 +85,9 @@
                 </if>
                 <if test="payType != null and payType!=''">
                     and payType=#{payType}
+                </if>
+                <if test="isDelivery != null and isDelivery!=''">
+                    and isDelivery=#{isDelivery}
                 </if>
         </trim>
         order by creationDate desc
@@ -133,6 +138,9 @@
                     <if test="payType != null and payType!=''">
                         and payType=#{payType}
                     </if>
+                    <if test="isDelivery != null and isDelivery!=''">
+                        and isDelivery=#{isDelivery}
+                    </if>
         </trim>
     </select>
 
@@ -150,7 +158,8 @@
             merchantId ,      <!--商家id-->
             buyUser ,      <!--购买人(用于用户未登录)-->
             buyUserId ,      <!--购买人id-->
-            payType       <!---->
+            payType ,      <!---->
+            isDelivery       <!--是否已发货-->
         )
         values(
                     #{orderId} ,      <!---->
@@ -165,7 +174,8 @@
                     #{merchantId} ,      <!--商家id-->
                     #{buyUser} ,      <!--购买人(用于用户未登录)-->
                     #{buyUserId} ,      <!--购买人id-->
-                    #{payType}       <!---->
+                    #{payType} ,      <!---->
+                    #{isDelivery}       <!--是否已发货-->
         )
     </insert>
 
@@ -210,6 +220,9 @@
                 </if>
                 <if test="payType != null and payType!=''">
                      payType=#{payType},
+                </if>
+                <if test="isDelivery != null and isDelivery!=''">
+                     isDelivery=#{isDelivery},
                 </if>
         </trim>
     </update>

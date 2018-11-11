@@ -113,6 +113,13 @@ public class CommdityInfoServiceImpl implements CommdityInfoService {
         return commodityByClass;
     }
 
+    @Override
+    public List<CommodityInfo> getCommodityByUserId(String merchantId) {
+        Map<String,Object> params=new HashMap<>();
+        params.put("merchantId",merchantId);
+        return commodityInfoMapper.getCommodityInfoListByMap(params);
+    }
+
     /**
      * 根据商品ID拿商品所有信息
      * @param commodityId
@@ -160,9 +167,12 @@ public class CommdityInfoServiceImpl implements CommdityInfoService {
      * @param number
      * @return
      */
-    public Boolean modifyNum(String commodityId, Integer number){
+    public  Boolean modifyNum(String commodityId, Integer number){
         CommodityInfo commodity = this.getCommodityById(commodityId);
         Integer newNum= commodity.getNum()-number;
+        if(newNum<0){
+            newNum=0;
+        }
         commodity.setNum(newNum);
         boolean res = this.modifyCommodity(commodity);
         if (res){
@@ -170,5 +180,21 @@ public class CommdityInfoServiceImpl implements CommdityInfoService {
         }
         return false;
     }
+
+    /**
+     * 根据商品ID和购买的商品数量查询是否可以购买
+     * @param commodityId
+     * @param number
+     * @return
+     */
+    @Override
+    public Boolean checknum(String commodityId, Integer number) {
+        CommodityInfo commodityById = this.getCommodityById(commodityId);
+        if(commodityById.getNum()>=number){
+            return true;
+        }
+        return false;
+    }
+
 
 }

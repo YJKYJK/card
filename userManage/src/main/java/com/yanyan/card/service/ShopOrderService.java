@@ -13,4 +13,6 @@ public interface ShopOrderService {
    boolean modifyShopOrder(ShopOrder shopOrder);
 
    boolean modifyAll(ShopOrder shopOrder);
+
+   boolean  isDelivery(ShopOrder shopOrder);
 }

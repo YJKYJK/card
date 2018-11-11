@@ -17,7 +17,8 @@
                 userId as userId,         <!--用户id-->
                 userKey as userKey,         <!--用户未登录时购买-->
                 merchantId as merchantId,         <!--商家id-->
-                merchantName as merchantName          <!--商家名称-->
+                merchantName as merchantName,         <!--商家名称-->
+                id as id          <!---->
         from buy_record
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -40,7 +41,8 @@
                 userId as userId,      <!--用户id-->
                 userKey as userKey,      <!--用户未登录时购买-->
                 merchantId as merchantId,      <!--商家id-->
-                merchantName as merchantName       <!--商家名称-->
+                merchantName as merchantName,      <!--商家名称-->
+                id as id       <!---->
             from buy_record
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="buyId != null and buyId!=''">
@@ -78,6 +80,9 @@
                 </if>
                 <if test="merchantName != null and merchantName!=''">
                     and merchantName=#{merchantName}
+                </if>
+                <if test="id != null and (id!='' or id==0)">
+                    and id=#{id}
                 </if>
         </trim>
         order by creationDate desc
@@ -125,6 +130,9 @@
                     <if test="merchantName != null and merchantName!=''">
                         and merchantName=#{merchantName}
                     </if>
+                    <if test="id != null and (id!='' or id==0)">
+                        and id=#{id}
+                    </if>
         </trim>
     </select>
 
@@ -141,7 +149,7 @@
             userId ,      <!--用户id-->
             userKey ,      <!--用户未登录时购买-->
             merchantId ,      <!--商家id-->
-            merchantName       <!--商家名称-->
+            merchantName ,      <!--商家名称-->
         )
         values(
                     #{buyId} ,      <!--购买记录id-->
@@ -155,7 +163,7 @@
                     #{userId} ,      <!--用户id-->
                     #{userKey} ,      <!--用户未登录时购买-->
                     #{merchantId} ,      <!--商家id-->
-                    #{merchantName}       <!--商家名称-->
+                    #{merchantName} ,      <!--商家名称-->
         )
     </insert>
 
@@ -197,6 +205,9 @@
                 </if>
                 <if test="merchantName != null and merchantName!=''">
                      merchantName=#{merchantName},
+                </if>
+                <if test="id != null and (id!='' or id==0)">
+                     id=#{id},
                 </if>
         </trim>
     </update>

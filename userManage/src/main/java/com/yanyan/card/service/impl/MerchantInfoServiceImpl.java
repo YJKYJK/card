@@ -1,9 +1,12 @@
 package com.yanyan.card.service.impl;
 
 import com.yanyan.card.bean.MerchantInfo;
+import com.yanyan.card.bean.ShopInfo;
 import com.yanyan.card.bean.UserInfo;
 import com.yanyan.card.mapper.MerchantInfoMapper;
+import com.yanyan.card.mapper.ShopInfoMapper;
 import com.yanyan.card.service.MerchantInfoService;
+import com.yanyan.card.service.ShopInfoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -18,6 +21,9 @@ public class MerchantInfoServiceImpl implements MerchantInfoService{
 @Resource
 private MerchantInfoMapper merchantInfoMapper;
 
+@Resource
+private ShopInfoService shopInfoService;
+
     /**
      * 商家注册
      * @param merchantInfo
@@ -27,6 +33,7 @@ private MerchantInfoMapper merchantInfoMapper;
     public boolean saveMerchant(MerchantInfo merchantInfo) {
         Date date=new Date();
         String userId=date.getTime()+ UUID.randomUUID().toString().substring(0,12);
+        //商家id
         merchantInfo.setMerchantId(userId);
         merchantInfo.setCreateTm(date);
         merchantInfo.setOperTm(date);
@@ -35,10 +42,16 @@ private MerchantInfoMapper merchantInfoMapper;
             return false;
         }
         Integer integer = merchantInfoMapper.saveMerchantInfo(merchantInfo);
-        if(integer>0){
-            return true;
+        if(integer<1){
+            return false;
         }
-        return false;
+
+        boolean b = shopInfoService.saveShopInfo(merchantInfo);
+        if(!b){
+            return false;
+        }
+
+        return true;
     }
 
 

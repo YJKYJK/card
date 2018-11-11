@@ -6,6 +6,7 @@
 
 
 <body>
+<input hidden value="ok">
 <h1>${success}</h1>
 <h1>${paySuccess}</h1>
 <h1>${error}</h1>

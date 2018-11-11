@@ -32,6 +32,8 @@ public class ShopOrder implements Serializable {
     private String buyUserId;
     //
     private String payType;
+    //是否已发货
+    private String isDelivery;
 
 
     public void setOrderId(String orderId) {
@@ -136,5 +138,13 @@ public class ShopOrder implements Serializable {
 
     public String getPayType() {
         return this.payType;
+    }
+
+    public void setIsDelivery(String isDelivery) {
+        this.isDelivery = isDelivery;
+    }
+
+    public String getIsDelivery() {
+        return this.isDelivery;
     }
 }

@@ -22,6 +22,8 @@ public class CommodityDetail implements Serializable {
     private Integer cardId;
     //商家id
     private String merchantId;
+    //商品名称
+    private String commodityName;
 
 
     public void setCommodityId(Integer commodityId) {
@@ -86,5 +88,13 @@ public class CommodityDetail implements Serializable {
 
     public String getMerchantId() {
         return this.merchantId;
+    }
+
+    public void setCommodityName(String commodityName) {
+        this.commodityName = commodityName;
+    }
+
+    public String getCommodityName() {
+        return this.commodityName;
     }
 }

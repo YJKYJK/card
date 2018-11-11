@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=decice-width,inital-scale=2,maximum-scale=1,minimum-scale=1,minimum-scale=1,user-scalable=no">
-    <title>${m.userName}</title>
-
-  <link href="/view/css/public.css" rel="stylesheet">
-   <link href="/view/css/login.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-
-</head>
-<body>
+<div>
 <h2 class="centers">${m.userName}:卡密管理</h2>
 
 <form id="addKami" class="form-horizontal" role="form" method="post">
@@ -44,7 +30,7 @@
 
 </form>
 
-</body>
+</div>
 <script>
     $.ajax({
     async:false,
@@ -95,9 +81,8 @@
 
         selectedVal=$('#goodsClass option:selected') .val();
         getShop(selectedVal);
-        getShopdetail();
     });
 
 
 </script>
-</html>
+

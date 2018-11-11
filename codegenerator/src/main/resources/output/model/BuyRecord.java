@@ -30,6 +30,8 @@ public class BuyRecord implements Serializable {
     private String merchantId;
     //商家名称
     private String merchantName;
+    //
+    private Integer id;
 
 
     public void setBuyId(String buyId) {
@@ -126,5 +128,13 @@ public class BuyRecord implements Serializable {
 
     public String getMerchantName() {
         return this.merchantName;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return this.id;
     }
 }

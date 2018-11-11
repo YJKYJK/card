@@ -13,7 +13,8 @@
                 createTm as createTm,         <!--创建时间-->
                 sellTm as sellTm,         <!--出售时间-->
                 cardId as cardId,         <!--id -->
-                merchantId as merchantId          <!--商家id-->
+                merchantId as merchantId,         <!--商家id-->
+                commodityName as commodityName          <!--商品名称-->
         from commodity_detail
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -32,7 +33,8 @@
                 createTm as createTm,      <!--创建时间-->
                 sellTm as sellTm,      <!--出售时间-->
                 cardId as cardId,      <!--id -->
-                merchantId as merchantId       <!--商家id-->
+                merchantId as merchantId,      <!--商家id-->
+                commodityName as commodityName       <!--商品名称-->
             from commodity_detail
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="commodityId != null and (commodityId!='' or commodityId==0)">
@@ -58,6 +60,9 @@
                 </if>
                 <if test="merchantId != null and merchantId!=''">
                     and merchantId=#{merchantId}
+                </if>
+                <if test="commodityName != null and commodityName!=''">
+                    and commodityName=#{commodityName}
                 </if>
         </trim>
         order by creationDate desc
@@ -93,6 +98,9 @@
                     <if test="merchantId != null and merchantId!=''">
                         and merchantId=#{merchantId}
                     </if>
+                    <if test="commodityName != null and commodityName!=''">
+                        and commodityName=#{commodityName}
+                    </if>
         </trim>
     </select>
 
@@ -105,7 +113,8 @@
             createTm ,      <!--创建时间-->
             sellTm ,      <!--出售时间-->
             cardId ,      <!--id -->
-            merchantId       <!--商家id-->
+            merchantId ,      <!--商家id-->
+            commodityName       <!--商品名称-->
         )
         values(
                     #{commodityId} ,      <!--商品ID-->
@@ -115,7 +124,8 @@
                     #{createTm} ,      <!--创建时间-->
                     #{sellTm} ,      <!--出售时间-->
                     #{cardId} ,      <!--id -->
-                    #{merchantId}       <!--商家id-->
+                    #{merchantId} ,      <!--商家id-->
+                    #{commodityName}       <!--商品名称-->
         )
     </insert>
 
@@ -145,6 +155,9 @@
                 </if>
                 <if test="merchantId != null and merchantId!=''">
                      merchantId=#{merchantId},
+                </if>
+                <if test="commodityName != null and commodityName!=''">
+                     commodityName=#{commodityName},
                 </if>
         </trim>
     </update>

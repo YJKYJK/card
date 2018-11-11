@@ -3,7 +3,9 @@ com\yanyan\card\service\CommodityDetailService.class
 com\yanyan\card\mapper\BuyRecordMapper.class
 com\yanyan\card\mapper\TopUpApplyMapper.class
 com\yanyan\card\util\Dto.class
+com\yanyan\card\bean\ShopInfo.class
 com\yanyan\card\service\impl\UserInfoServiceImpl.class
+com\yanyan\card\service\ShopInfoService.class
 com\yanyan\card\controller\ShopClassController.class
 com\yanyan\card\mapper\TopUpRecordsMapper.class
 com\yanyan\card\controller\MerchantInfoController.class
@@ -24,6 +26,7 @@ com\yanyan\card\test\ATest.class
 com\yanyan\card\bean\CommodityDetail.class
 com\yanyan\card\service\CommdityInfoService.class
 com\yanyan\card\service\ShopClassService.class
+com\yanyan\card\mapper\ShopInfoMapper.class
 com\yanyan\card\bean\TopUpCache.class
 com\yanyan\card\controller\shopContorller.class
 com\yanyan\card\bean\MerchantInfo.class
@@ -33,13 +36,13 @@ com\yanyan\card\bean\GoodsClass.class
 com\yanyan\card\bean\BuyRecord.class
 com\yanyan\card\service\impl\MerchantInfoServiceImpl.class
 com\yanyan\card\mapper\TopUpCacheMapper.class
-com\yanyan\card\pay\PayUtil.class
 com\yanyan\card\service\impl\BuyRecordServiceImpl.class
 com\yanyan\card\service\MerchantInfoService.class
 com\yanyan\card\bean\TopUpRecords.class
 com\yanyan\card\mapper\GoodsClassMapper.class
 com\yanyan\card\util\DtoUtil.class
 com\yanyan\card\controller\CommodityDetailController.class
+com\yanyan\card\service\impl\ShopInfoServiceImpl.class
 com\yanyan\card\service\UserInfoService.class
 com\yanyan\card\util\Page.class
 com\yanyan\card\controller\CommodityController.class

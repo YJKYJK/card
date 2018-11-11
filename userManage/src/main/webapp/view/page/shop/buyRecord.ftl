@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=decice-width,inital-scale=2,maximum-scale=1,minimum-scale=1,minimum-scale=1,user-scalable=no">
 
     <title>订单查询</title>
-
+<link href="/view/css/public.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap-select/2.0.0-beta1/css/bootstrap-select.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css" rel="stylesheet">
@@ -20,20 +20,20 @@
     <script src="https://cdn.bootcss.com/bootstrap-select/2.0.0-beta1/js/i18n/defaults-zh_CN.min.js"></script>
 
 </head>
-<body>
+<body style="text-align: center;background-color: #FFFFFF">
 
-<div style="padding: 100px 100px 10px;">
+<div style="padding: 20px 20px 20px;">
 
     <div class="row">
-        <div class="col-lg-6">
+        <div >
             <div class="input-group">
-                <input type="text" class="form-control" name="param">
+                <input type="text" class="form-control" name="param" id="param" placeholder="订单编号或联系方法">
                 <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">订单查询</button>
+                        <button class="btn btn-default" type="button" id="aaaa">订单查询</button>
                     </span>
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
+            </div>
+        </div>
+    </div>
 
 </div>
 
@@ -42,14 +42,41 @@
 
 </div>
 
-
-
-
-
-
 </body>
 <script>
-$
+    $("#aaaa").on("click",function () {
+        $(".maindiv").remove();
+        $.ajax({
+            async:true,
+            type:"get",
+            url:"/shop/getBuyRecord",
+            data:{param:$("#param").val()},
+            success:function (res) {
+                if(res.size<1){
+                    $("#main").append("<h1>无订单信息</h1>");
+                }else {
+                    $.each(res,function (i,value) {
+
+                        var maindiv=$("<div class='maindiv'></div>");
+                        var shopName=$("<span>商品名称:</span><span>"+value.commodityName+"</span><br>")
+                        var kahao=$("<span>卡号:</span><span>"+value.cardNumber+"</span><br>");
+                        var kami=$("<span>卡密:</span><span>"+value.cardNumber+"</span><br>");
+                        var tops=$("<span class='tops'></span>");
+                        maindiv.append(shopName);
+                        maindiv.append(kahao);
+                        maindiv.append(kami);
+                        $("#main").append(maindiv);
+                        $("#main").append(tops);
+                    });
+                }
+            }
+        });
+
+
+
+
+    });
+
 
 </script>
 </html>

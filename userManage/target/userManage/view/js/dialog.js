@@ -64,8 +64,10 @@ $.dialogView=function (title,viewurl,viewdata,submit,close,fromurl,fromid,fn) {
                     url:fromurl,
                     data:$("#"+fromid).serialize(),
                     success:function (res) {
+                         if(typeof fn==="function"){
+                             fn(res);
+                         }
 
-                        fn(res);
                     }
 
                 });

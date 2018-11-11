@@ -7,6 +7,7 @@ import com.yanyan.card.mapper.CommodityDetailMapper;
 import com.yanyan.card.service.CommdityInfoService;
 import com.yanyan.card.service.CommodityDetailService;
 import com.yanyan.card.util.EmptyUtils;
+import com.yanyan.card.util.Page;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -32,6 +33,7 @@ public class CommodityDetailServiceImpl implements CommodityDetailService{
      */
     @Override
     public Integer saveList(String km, String catLine, CommodityInfo commodityInfo) {
+        commodityInfo=commdityInfoService.getCommodityById(commodityInfo.getCommodityId()+"");
         List<CommodityDetail>commodityDetailList=new ArrayList<>();
         Date date=new Date();
         if(EmptyUtils.isEmpty(km)){
@@ -43,6 +45,7 @@ public class CommodityDetailServiceImpl implements CommodityDetailService{
             CommodityDetail commodityDetail=new CommodityDetail();
             commodityDetail.setIsSell("N");
             commodityDetail.setCreateTm(date);
+           commodityDetail.setCommodityName(commodityInfo.getCommodityName());
             commodityDetail.setMerchantId(commodityInfo.getMerchantId());
             commodityDetail.setCommodityId(commodityInfo.getCommodityId());
             String cardNumber="";
@@ -95,6 +98,80 @@ public class CommodityDetailServiceImpl implements CommodityDetailService{
             }
         }
         return commodityDetailList;
+    }
+
+    /**
+     * 根据条件查询卡密
+     * @param commodityDetail
+     * @param pageNumber
+     * @param pageSize
+     * @return
+     */
+    @Override
+    public Page<CommodityDetail> queryKamiByParams(CommodityDetail commodityDetail,Integer pageNumber,Integer pageSize) {
+        if(EmptyUtils.isEmpty(pageNumber)){
+            pageNumber=0;
+        }
+
+        if (EmptyUtils.isEmpty(pageSize)){
+            pageSize=6;
+        }
+        if(pageNumber>0){
+            pageNumber=(pageNumber-1)*pageSize;
+        }
+
+        Map<String,Object>params=new HashMap<>();
+        params.put("merchantId",commodityDetail.getMerchantId());
+        params.put("isSell",commodityDetail.getIsSell());
+        params.put("commodityId",commodityDetail.getCommodityId());
+        params.put("cardNumber",commodityDetail.getCardNumber());
+        params.put("createTm",commodityDetail.getCreateTm());
+        params.put("pageNumber",pageNumber);
+        params.put("pageSize",pageSize);
+        List<CommodityDetail> kamiList= commodityDetailMapper.getKamiListByMap(params);
+        Integer total= commodityDetailMapper.getKamiCountByMap(params);
+        Page<CommodityDetail> page=new Page<>();
+        page.setRows(kamiList);
+        page.setTotal(total);
+        return page;
+    }
+
+    /**
+     * 删除卡密
+     * @param commodityDetail
+     * @return
+     */
+    @Override
+    public boolean deleteKami(CommodityDetail commodityDetail) {
+        Integer integer = commodityDetailMapper.deleteKami(commodityDetail);
+        if(integer>0){
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 根据id获取卡密
+     * @param commodityDetail
+     * @return
+     */
+    @Override
+    public CommodityDetail getKamiById(CommodityDetail commodityDetail) {
+        return commodityDetailMapper.getKamiById(commodityDetail);
+    }
+
+    /**
+     * 修改卡密信息
+     * @param commodityDetail
+     * @return
+     */
+    @Override
+    public boolean modifyKami(CommodityDetail commodityDetail) {
+        Integer update = commodityDetailMapper.modifyCommodityDetail(commodityDetail);
+        if(update>0){
+            return true;
+        }
+        return false;
     }
 
 

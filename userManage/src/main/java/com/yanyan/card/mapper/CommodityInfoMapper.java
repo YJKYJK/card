@@ -20,7 +20,7 @@ public interface CommodityInfoMapper {
 //
 //	public Integer removeCommodityInfoById(@Param(value = "id") Long id)throws Exception;
 
-
+	List<CommodityInfo>	getCommodityInfoListByMap(Map<String, Object> param);
 
 	Integer  saveCommdityInfo(CommodityInfo commodityInfo);
 

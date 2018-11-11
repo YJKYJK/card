@@ -14,17 +14,61 @@
 </head>
 <body>
 
+
+
+
+<br>
+<ui class="funui">
+    <li onclick="location.href='/shop/gotoUpdateShop'">
+        <img src="/view/imgs/零件.png">
+        <span>商店管理</span>
+    </li>
+
+
+    <li onclick="location.href='/shopClass/gotoShopClass'">
+        <img src="/view/imgs/介绍.png">
+        <span>类别管理</span>
+    </li>
+
+    <li onclick="location.href='/commodity/gotoCommodity'">
+        <img src="/view/imgs/商城.png">
+        <span>商品管理</span>
+    </li>
+
+    <li onclick="location.href='/kami/gotoKami'">
+        <img src="/view/imgs/新闻.png">
+        <span>卡密管理</span>
+    </li>
+
+    <li>
+        <img src="/view/imgs/新闻.png">
+        <span>商品类别</span>
+    </li>
+
+    <li>
+        <img src="/view/imgs/新闻.png">
+        <span>订单详情</span>
+    </li>
+
+    <li>
+        <img src="/view/imgs/新闻.png">
+        <span>商品类别</span>
+    </li>
+
+    <li>
+        <img src="/view/imgs/新闻.png">
+        <span>商品类别</span>
+    </li>
+    <li>
+        <img src="/view/imgs/新闻.png">
+        <span>商品类别</span>
+    </li>
+
+</ui>
+
+
+
 <div><a href="${contextPath}/shop/gotoShop/${o.merchantId}">进入商店</a></div>
-
-
-<a href="/shopClass/gotoShopClass">商品类别管理</a>
-
-<a href="/commodity/gotoCommodity">商品管理</a>
-
-<a href="/kami/gotoKami">卡密管理</a>
-
-
-
 
 
 </body>

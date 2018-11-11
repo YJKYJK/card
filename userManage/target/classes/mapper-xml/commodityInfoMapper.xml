@@ -112,4 +112,65 @@
     </update>
 
 
+
+    <select id="getCommodityInfoListByMap" resultType="CommodityInfo"
+            parameterType="java.util.Map">
+        select
+        commodityId as commodityId,      <!--商品id-->
+        className as className,      <!--类名-->
+        classId as classId,      <!--类别id-->
+        commodityName as commodityName,      <!--商品名称-->
+        merchantId as merchantId,      <!--商家id-->
+        price as price,      <!--商品价格-->
+        num as num,      <!--商品数量-->
+        remark as remark,      <!--商品说明-->
+        pic as pic,      <!--图片-->
+        createTm as createTm,      <!--创建时间-->
+        operTm as operTm,      <!--操作时间-->
+        selled as selled       <!--已售数量-->
+        from commodity_info
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="commodityId != null and (commodityId!='' or commodityId==0)">
+                and commodityId=#{commodityId}
+            </if>
+            <if test="className != null and className!=''">
+                and className=#{className}
+            </if>
+            <if test="classId != null and (classId!='' or classId==0)">
+                and classId=#{classId}
+            </if>
+            <if test="commodityName != null and commodityName!=''">
+                and commodityName=#{commodityName}
+            </if>
+            <if test="merchantId != null and merchantId!=''">
+                and merchantId=#{merchantId}
+            </if>
+            <if test="price != null and price!=''">
+                and price=#{price}
+            </if>
+            <if test="num != null and (num!='' or num==0)">
+                and num=#{num}
+            </if>
+            <if test="remark != null and remark!=''">
+                and remark=#{remark}
+            </if>
+            <if test="pic != null and pic!=''">
+                and pic=#{pic}
+            </if>
+            <if test="createTm != null and createTm!=''">
+                and createTm=#{createTm}
+            </if>
+            <if test="operTm != null and operTm!=''">
+                and operTm=#{operTm}
+            </if>
+            <if test="selled != null and (selled!='' or selled==0)">
+                and selled=#{selled}
+            </if>
+        </trim>
+        order by createTm desc
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
 </mapper>

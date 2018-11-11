@@ -33,18 +33,28 @@
       <file leaf-file-name="shop.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/shop.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="231" column="44" lean-forward="false" selection-start-line="231" selection-start-column="44" selection-end-line="231" selection-end-column="44" />
+            <state relative-caret-position="2165">
+              <caret line="148" column="31" lean-forward="true" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buyRecord.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/buyRecord.ftl">
+      <file leaf-file-name="shopClass.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/shopClass.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+            <state relative-caret-position="391">
+              <caret line="114" column="20" lean-forward="false" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="merchantInfo.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/merchant/merchantInfo.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -53,33 +63,20 @@
       <file leaf-file-name="PayConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="198">
+              <caret line="6" column="80" lean-forward="true" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shopContorller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/shopContorller.java">
+      <file leaf-file-name="PayController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/PayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1793">
-              <caret line="117" column="36" lean-forward="false" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
+            <state relative-caret-position="329">
+              <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="45" />
               <folding>
-                <element signature="e#3158#3159#0" expanded="true" />
-                <element signature="e#3200#3201#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuyRecordServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/BuyRecordServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="55" column="16" lean-forward="false" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1574#1630#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -88,18 +85,50 @@
       <file leaf-file-name="PayUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="-1717">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#3099#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommodityDetailMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/CommodityDetailMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="593">
+              <caret line="28" column="65" lean-forward="false" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/userManage/pom.xml">
+      <file leaf-file-name="CommodityDetailService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/CommodityDetailService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-529">
-              <caret line="46" column="63" lean-forward="false" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+            <state relative-caret-position="566">
+              <caret line="25" column="56" lean-forward="false" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modifyShopclass.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/modifyShopclass.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommodityDetailServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/CommodityDetailServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="94" column="57" lean-forward="false" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -140,7 +169,15 @@
       <find>getCommodityById</find>
       <find>getCommodityDe</find>
       <find>getOrderById</find>
+      <find>sign</find>
+      <find>saveShopInfo</find>
+      <find>modifyShopInfo</find>
+      <find>getShopInfoById</find>
       <find>getCommodityDetailListByMap</find>
+      <find>getShopdetail</find>
+      <find>queryKami</find>
+      <find>saveList</find>
+      <find>update</find>
     </findStrings>
     <replaceStrings>
       <replace>merchantId</replace>
@@ -157,57 +194,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/ShopClassService.java" />
-        <option value="$PROJECT_DIR$/codegenerator/src/test/java/com/ytzl/itrip/AppTest.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayUtil.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/ShopOrder.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/resources/springmvc.xml" />
         <option value="$PROJECT_DIR$/pay/pom.xml" />
-        <option value="$PROJECT_DIR$/pay/src/main/java/PayController.java" />
-        <option value="$PROJECT_DIR$/pay/src/main/java/com/yanyan/card/controller/ShopOrderService.java" />
-        <option value="$PROJECT_DIR$/pay/src/main/java/com/yanyan/card/controller/PayController.java" />
-        <option value="$PROJECT_DIR$/pay/src/main/resources/springmvc.xml" />
-        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/pay.html" />
-        <option value="$PROJECT_DIR$/codegenerator/src/main/java/com/ytzl/itrip/Test.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/ShopClassServiceImpl.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/payasnyView.ftl" />
+        <option value="$PROJECT_DIR$/pay/src/main/webapp/notify.jsp" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayUtil.java" />
+        <option value="$PROJECT_DIR$/pay/src/main/webapp/codepay.jsp" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/BuyRecordService.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/buyRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/buyError.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/buyRecord.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/ShopOrderService.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/ShopOrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/shopOrderMapper.xml" />
         <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/css/public.css" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/MerchantInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/ShopInfo.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/css/login.css" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/ShopInfoMapper.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/ShopInfoService.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/ShopInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/shopInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/updateShop.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/payasnyView.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/cards.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayConfig.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/PayController.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/ShopClassServiceImpl.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/resources/db.properties" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/kami2.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/shopClass.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/index.html" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/header.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/login.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/header.html" />
         <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/merchant/merchatlogin.ftl" />
-        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/addKami.ftl" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/CommodityDetailController.java" />
         <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/commodity/commodity.ftl" />
         <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/js/dialog.js" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/MerchantInfoController.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/kami.ftl" />
-        <option value="$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/shopOrderMapper.xml" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/CommdityInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/CommodityDetailService.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/BuyRecord.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/commodityInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/CommdityInfoService.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/CommodityInfoMapper.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/CommodityDetailMapper.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/CommodityDetailServiceImpl.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/commodityDetailMapper.xml" />
-        <option value="$PROJECT_DIR$/userManage/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/userManage/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/index.html" />
-        <option value="$PROJECT_DIR$/pay/src/main/java/com/yanyan/card/service/impl/ShopOrderService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/userManage/pom.xml" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/ShopOrderService.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/ShopOrderMapper.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/ShopOrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/buyRecordMapper.xml" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/BuyRecordMapper.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/PayController.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/merchant/merchantInfo.ftl" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/BuyRecordService.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/BuyRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/addKami.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/CommodityDetail.java" />
         <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/shop.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/commodityInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/CommodityInfoMapper.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/CommdityInfoService.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/CommdityInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/shopContorller.java" />
-        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/buyRecord.ftl" />
-        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayConfig.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/modifyKami.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/kami.ftl" />
+        <option value="$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/commodityDetailMapper.xml" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/CommodityDetailService.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/CommodityDetailController.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/CommodityDetailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/CommodityDetailMapper.java" />
+        <option value="$PROJECT_DIR$/userManage/src/main/webapp/view/page/merchant/merchantInfo.ftl" />
       </list>
     </option>
   </component>
@@ -232,7 +269,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="card" />
+          <option name="myItemId" value="userManage Maven Webapp" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -242,7 +279,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="card" />
+          <option name="myItemId" value="userManage Maven Webapp" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -253,8 +290,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="-5" />
     <option name="width" value="1938" />
     <option name="height" value="1050" />
   </component>
@@ -303,9 +339,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -371,13 +406,172 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="userManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="userManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="userManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="userManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pay" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="userManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="card" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.testRunning" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.38467434" />
@@ -391,11 +585,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\card\userManage\src\main\webapp\view\page\shop" />
-      <recent name="D:\card\userManage\src\main\java\com\yanyan\card\bean" />
-      <recent name="D:\card\userManage\src\main\resources\mapper-xml" />
-      <recent name="D:\card\sql" />
       <recent name="D:\card\userManage\src\main\webapp\view\page\kami" />
+      <recent name="D:\card\userManage\src\main\java\com\yanyan\card\bean" />
+      <recent name="D:\card\userManage\src\main\resources" />
+      <recent name="D:\card\userManage\src\main\webapp\view" />
+      <recent name="D:\card\userManage\src\main\webapp\view\page\shop" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.yanyan.card.controller" />
@@ -907,78 +1101,6 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="tread" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.302" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="eopay_demo:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_card_2" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="1470" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="eopay_demo:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <configuration default="false" name="user" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.302" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -1076,10 +1198,82 @@
       </MavenSettings>
       <method />
     </configuration>
+    <configuration default="false" name="tread" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.302" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="pay:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_card_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1470" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="pay:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tread" />
-      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.user" />
-      <item index="2" class="java.lang.String" itemvalue="Maven.Unnamed" />
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.user" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.Unnamed" />
+      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.tread" />
       <item index="3" class="java.lang.String" itemvalue="Application.Test" />
       <item index="4" class="java.lang.String" itemvalue="Application.ATest" />
       <item index="5" class="java.lang.String" itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
@@ -1123,7 +1317,15 @@
       <workItem from="1540482191126" duration="1003000" />
       <workItem from="1540555980587" duration="10419000" />
       <workItem from="1540616491020" duration="16206000" />
-      <workItem from="1540729610321" duration="10003000" />
+      <workItem from="1540729610321" duration="10589000" />
+      <workItem from="1541068771022" duration="12457000" />
+      <workItem from="1541154161120" duration="11900000" />
+      <workItem from="1541224305906" duration="18484000" />
+      <workItem from="1541316744360" duration="2732000" />
+      <workItem from="1541425759455" duration="5867000" />
+      <workItem from="1541511134777" duration="1191000" />
+      <workItem from="1541684804613" duration="4246000" />
+      <workItem from="1541835080666" duration="29290000" />
     </task>
     <servers />
   </component>
@@ -1139,38 +1341,38 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247500000" />
+    <option name="totallyTimeSpent" value="334253000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
+    <frame x="-5" y="0" width="1938" height="1050" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43800697" sideWeight="0.5053996" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29383314" sideWeight="0.50701946" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3960511" sideWeight="0.5048596" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24190065" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35799137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="top" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1535671" sideWeight="0.4951404" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6698912" sideWeight="0.49298057" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31076178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26118502" sideWeight="0.49784017" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30229747" sideWeight="0.49784017" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34287256" sideWeight="0.48785046" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32937366" sideWeight="0.48785046" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3137149" sideWeight="0.5121495" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26187906" sideWeight="0.50790066" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1223,21 +1425,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/PayController.java</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/PayController.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="62" />
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1246,371 +1434,106 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/CommodityController.java">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/cards.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1700">
-          <caret line="66" column="9" lean-forward="true" selection-start-line="63" selection-start-column="6" selection-end-line="66" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="1221">
+          <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/CommodityDetailController.java">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/payasnyView.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="297">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/CommodityDetailService.java">
+    <entry file="file://$PROJECT_DIR$/codegenerator/src/main/resources/output/mapper-xml/commoditDetailMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
-          <folding />
+        <state relative-caret-position="131">
+          <caret line="63" column="3" lean-forward="true" selection-start-line="63" selection-start-column="3" selection-end-line="88" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codegenerator/src/main/java/com/ytzl/itrip/Test.java">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/goodsClassMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/BuyRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding>
-            <element signature="e#857#858#0" expanded="false" />
-            <element signature="e#903#904#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/UserInfoServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/ShopClassService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/CommodityInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="34" />
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/CommdityInfoService.java">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/ShopInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="1617">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/ShopClassServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/ShopClassController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="63" column="7" lean-forward="true" selection-start-line="63" selection-start-column="7" selection-end-line="66" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.0.5/mybatis-3.0.5.jar!/org/apache/ibatis/binding/MapperProxy.class">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/CommodityInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/CommdityInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/commodityInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="87" column="32" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="32" />
-          <folding>
-            <marker date="1540623108069" expanded="true" signature="322:458" ph="SELECT * FRO... commodity_info" />
-            <marker date="1540623108069" expanded="true" signature="563:630" ph="SELECT COUNT... commodity_info" />
-            <marker date="1540623108069" expanded="true" signature="715:1650" ph="insert into commodity_info... " />
-            <marker date="1540623108069" expanded="true" signature="2624:2712" ph="DELETE FROM " />
-            <marker date="1540623108069" expanded="true" signature="2801:2854" ph="select * fro... commodity_info" />
-            <marker date="1540623108069" expanded="true" signature="2941:3002" ph="select * fro... commodity_info" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/4.1.4.RELEASE/spring-webmvc-4.1.4.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="472" column="0" lean-forward="false" selection-start-line="472" selection-start-column="0" selection-end-line="472" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/4.1.4.RELEASE/spring-webmvc-4.1.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="402" column="0" lean-forward="false" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/4.1.4.RELEASE/spring-web-4.1.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/CommodityDetailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2308">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/shopOrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="199" column="8" lean-forward="false" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="57" />
-          <folding>
-            <marker date="1540566585796" expanded="true" signature="6231:7467" ph="insert into shop_order... " />
-            <marker date="1540566585796" expanded="true" signature="8363:8402" ph="delete from " />
-            <marker date="1540566585796" expanded="true" signature="8507:8556" ph="SELECT * FRO... shop_order" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/commodityDetailMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="168" column="21" lean-forward="false" selection-start-line="168" selection-start-column="21" selection-end-line="168" selection-end-column="21" />
-          <folding>
-            <marker date="1540626246592" expanded="true" signature="1114:2821" ph="select commo... commodity_detail" />
-            <marker date="1540626246592" expanded="true" signature="2917:3708" ph="insert into commodity_detail... " />
-            <marker date="1540626246592" expanded="true" signature="5076:5121" ph="delete from " />
-            <marker date="1540626246592" expanded="true" signature="5204:5470" ph="insert into commodity_detail... " />
-            <marker date="1540626246592" expanded="true" signature="6005:6028" ph="UPDATE commo... " />
-            <marker date="1540626246592" expanded="true" signature="6005:6351" ph="UPDATE commo... " />
-            <marker date="1540626246592" expanded="true" signature="6452:6475" ph="UPDATE commo... " />
-            <marker date="1540626246592" expanded="true" signature="6452:6752" ph="UPDATE commo... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codegenerator/src/main/resources/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="561">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/kami2.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/shopInfo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="11" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/updateShop.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="60" column="33" lean-forward="false" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/commodity/addCommodity.ftl">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-297">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1419">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/TopUpApply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#443#444#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#512#513#0" expanded="false" />
-            <element signature="e#546#547#0" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#634#635#0" expanded="false" />
-            <element signature="e#669#670#0" expanded="false" />
-            <element signature="e#705#706#0" expanded="false" />
-            <element signature="e#753#754#0" expanded="false" />
-            <element signature="e#793#794#0" expanded="false" />
-            <element signature="e#828#829#0" expanded="false" />
-            <element signature="e#864#865#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#946#947#0" expanded="false" />
-            <element signature="e#978#979#0" expanded="false" />
-            <element signature="e#1013#1014#0" expanded="false" />
-            <element signature="e#1061#1062#0" expanded="false" />
-            <element signature="e#1101#1102#0" expanded="false" />
-            <element signature="e#1136#1137#0" expanded="false" />
-            <element signature="e#1172#1173#0" expanded="false" />
-            <element signature="e#1218#1219#0" expanded="false" />
-            <element signature="e#1256#1257#0" expanded="false" />
-            <element signature="e#1290#1291#0" expanded="false" />
-            <element signature="e#1325#1326#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/ShopClassServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="471" column="34" lean-forward="false" selection-start-line="471" selection-start-column="34" selection-end-line="471" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/GoodsClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/ShopOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1749">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/ShopOrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/ShopOrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/ShopOrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="134" column="66" lean-forward="true" selection-start-line="134" selection-start-column="66" selection-end-line="134" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/CommodityDetailMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="14" column="52" lean-forward="false" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/BuyRecordMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="23" column="77" lean-forward="false" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/PayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/merchant/merchantInfo.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-173">
-          <caret line="16" column="74" lean-forward="true" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/BuyRecordService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/buyRecordMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="21" />
-          <folding>
-            <marker date="1540618105284" expanded="true" signature="5952:7133" ph="insert into buy_record... " />
-            <marker date="1540618105284" expanded="true" signature="8982:9021" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/commodity/commodity.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/css/shop.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/css/other.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-937">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/css/public.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-792">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1618,93 +1541,326 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="24" column="70" lean-forward="false" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+        <state relative-caret-position="627">
+          <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/shop.ftl">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/view/js/dialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="231" column="44" lean-forward="false" selection-start-line="231" selection-start-column="44" selection-end-line="231" selection-end-column="44" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/buyRecord.ftl">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/login.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+        <state relative-caret-position="231">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayUtil.java">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/merchant/merchatlogin.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="165">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayConfig.java">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="231">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/pom.xml">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/addKami.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-529">
-          <caret line="46" column="63" lean-forward="false" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codegenerator/src/main/java/com/ytzl/itrip/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/applicationContext-public.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/buyRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1541086736488" expanded="true" signature="5945:7126" ph="insert into buy_record... " />
+            <marker date="1541086736488" expanded="true" signature="8975:9014" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/js/dialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1220">
+          <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codegenerator/src/main/resources/output/mapper-xml/commodityDetailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1541928779862" expanded="true" signature="4901:5793" ph="insert into commodity_detail... " />
+            <marker date="1541928779862" expanded="true" signature="7308:7353" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codegenerator/src/main/resources/output/mapper-xml/commodityInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="86" column="13" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="86" selection-end-column="13" />
+          <folding>
+            <marker date="1541928779862" expanded="true" signature="5858:6985" ph="insert into commodity_info... " />
+            <marker date="1541928779862" expanded="true" signature="8825:8868" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/commodityInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="115" column="41" lean-forward="false" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="41" />
+          <folding>
+            <marker date="1541944814963" expanded="true" signature="322:458" ph="SELECT * FRO... commodity_info" />
+            <marker date="1541944814963" expanded="true" signature="563:630" ph="SELECT COUNT... commodity_info" />
+            <marker date="1541944814963" expanded="true" signature="715:1650" ph="insert into commodity_info... " />
+            <marker date="1541944814963" expanded="true" signature="2624:2712" ph="DELETE FROM " />
+            <marker date="1541944814963" expanded="true" signature="2801:2854" ph="select * fro... commodity_info" />
+            <marker date="1541944814963" expanded="true" signature="2941:3002" ph="select * fro... commodity_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/CommodityInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="77" lean-forward="false" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/CommdityInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="25" column="69" lean-forward="false" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/CommdityInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="116" column="51" lean-forward="false" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/addShopclass.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/shopContorller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1793">
-          <caret line="117" column="36" lean-forward="false" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
+        <state relative-caret-position="4917">
+          <caret line="174" column="24" lean-forward="true" selection-start-line="174" selection-start-column="24" selection-end-line="174" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/UserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="116" column="31" lean-forward="false" selection-start-line="116" selection-start-column="21" selection-end-line="116" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/MerchantInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/CommodityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/bean/CommodityDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/commodity/commodity.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="159" column="12" lean-forward="true" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/modifyKami.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/kami/kami.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="216" column="56" lean-forward="false" selection-start-line="216" selection-start-column="46" selection-end-line="216" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/CommodityDetailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="94" column="57" lean-forward="false" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/CommodityDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="25" column="56" lean-forward="false" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/modifyShopclass.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/mapper/CommodityDetailMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="28" column="65" lean-forward="false" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/resources/mapper-xml/commodityDetailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1962">
+          <caret line="157" column="37" lean-forward="false" selection-start-line="157" selection-start-column="16" selection-end-line="157" selection-end-column="37" />
           <folding>
-            <element signature="e#3158#3159#0" expanded="true" />
-            <element signature="e#3200#3201#0" expanded="true" />
+            <marker date="1541950376226" expanded="true" signature="1114:2821" ph="select commo... commodity_detail" />
+            <marker date="1541950376226" expanded="true" signature="2952:4125" ph="select * fro... commodity_detail" />
+            <marker date="1541950376226" expanded="true" signature="5434:6225" ph="insert into commodity_detail... " />
+            <marker date="1541950376226" expanded="true" signature="7375:7420" ph="delete from " />
+            <marker date="1541950376226" expanded="true" signature="8355:8701" ph="UPDATE commo... " />
+            <marker date="1541950376226" expanded="true" signature="9194:9245" ph="DELETE FROM " />
+            <marker date="1541950376226" expanded="true" signature="9194:9274" ph="DELETE FROM " />
+            <marker date="1541950376226" expanded="true" signature="9389:9443" ph="SELECT * FRO... commodity_detail" />
+            <marker date="1541950376226" expanded="true" signature="9389:9472" ph="SELECT * FRO... commodity_detail" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pay/src/main/java/com/yanyan/card/service/impl/ShopOrderService.java">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/CommodityDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="148" column="11" lean-forward="false" selection-start-line="148" selection-start-column="11" selection-end-line="148" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/shop.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2165">
+          <caret line="148" column="31" lean-forward="true" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/shop/shopClass.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="114" column="20" lean-forward="false" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/webapp/view/page/merchant/merchantInfo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1717">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#3099#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/pay/PayConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <caret line="6" column="80" lean-forward="true" selection-start-line="6" selection-start-column="68" selection-end-line="6" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pay/src/main/java/com/yanyan/card/service/ShopOrderService.java">
+    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/controller/PayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pay/src/main/java/com/yanyan/card/controller/PayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userManage/src/main/java/com/yanyan/card/service/impl/BuyRecordServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="55" column="16" lean-forward="false" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        <state relative-caret-position="329">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1574#1630#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1720,6 +1876,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

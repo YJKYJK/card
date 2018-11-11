@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyan.card.dao.mapper.ShopInfoMapper">
+
+    <select id="getShopInfoById" resultType="ShopInfo">
+        select
+                merchantId as merchantId,         <!--商家id-->
+                notice as notice,         <!--公告-->
+                shopName as shopName,         <!--商店名称-->
+                qq as qq,         <!--QQ账号-->
+                qqGroup as qqGroup,         <!--QQ群-->
+                operTm as operTm,         <!--最近操作时间-->
+                createTm as createTm          <!--创建时间-->
+        from shop_info
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getShopInfoListByMap" resultType="ShopInfo"
+            parameterType="java.util.Map">
+            select
+                merchantId as merchantId,      <!--商家id-->
+                notice as notice,      <!--公告-->
+                shopName as shopName,      <!--商店名称-->
+                qq as qq,      <!--QQ账号-->
+                qqGroup as qqGroup,      <!--QQ群-->
+                operTm as operTm,      <!--最近操作时间-->
+                createTm as createTm       <!--创建时间-->
+            from shop_info
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="merchantId != null and merchantId!=''">
+                    and merchantId=#{merchantId}
+                </if>
+                <if test="notice != null and notice!=''">
+                    and notice=#{notice}
+                </if>
+                <if test="shopName != null and shopName!=''">
+                    and shopName=#{shopName}
+                </if>
+                <if test="qq != null and qq!=''">
+                    and qq=#{qq}
+                </if>
+                <if test="qqGroup != null and qqGroup!=''">
+                    and qqGroup=#{qqGroup}
+                </if>
+                <if test="operTm != null and operTm!=''">
+                    and operTm=#{operTm}
+                </if>
+                <if test="createTm != null and createTm!=''">
+                    and createTm=#{createTm}
+                </if>
+        </trim>
+        order by creationDate desc
+        <if test="beginPos != null and beginPos!='' and pageSize != null  and pageSize !='' ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getShopInfoCountByMap" resultType="Integer" parameterType="java.util.Map">
+        select count(*) from shop_info
+        <trim prefix="where" prefixOverrides="and | or">
+                    <if test="merchantId != null and merchantId!=''">
+                        and merchantId=#{merchantId}
+                    </if>
+                    <if test="notice != null and notice!=''">
+                        and notice=#{notice}
+                    </if>
+                    <if test="shopName != null and shopName!=''">
+                        and shopName=#{shopName}
+                    </if>
+                    <if test="qq != null and qq!=''">
+                        and qq=#{qq}
+                    </if>
+                    <if test="qqGroup != null and qqGroup!=''">
+                        and qqGroup=#{qqGroup}
+                    </if>
+                    <if test="operTm != null and operTm!=''">
+                        and operTm=#{operTm}
+                    </if>
+                    <if test="createTm != null and createTm!=''">
+                        and createTm=#{createTm}
+                    </if>
+        </trim>
+    </select>
+
+    <insert id="saveShopInfo" parameterType="ShopInfo">
+        insert into shop_info(
+            merchantId ,      <!--商家id-->
+            notice ,      <!--公告-->
+            shopName ,      <!--商店名称-->
+            qq ,      <!--QQ账号-->
+            qqGroup ,      <!--QQ群-->
+            operTm ,      <!--最近操作时间-->
+            createTm       <!--创建时间-->
+        )
+        values(
+                    #{merchantId} ,      <!--商家id-->
+                    #{notice} ,      <!--公告-->
+                    #{shopName} ,      <!--商店名称-->
+                    #{qq} ,      <!--QQ账号-->
+                    #{qqGroup} ,      <!--QQ群-->
+                    #{operTm} ,      <!--最近操作时间-->
+                    #{createTm}       <!--创建时间-->
+        )
+    </insert>
+
+    <update id="modifyShopInfo" parameterType="ShopInfo">
+        update shop_info
+        <trim prefix="set" suffixOverrides="," suffix="where id= #{id}">
+                <if test="merchantId != null and merchantId!=''">
+                     merchantId=#{merchantId},
+                </if>
+                <if test="notice != null and notice!=''">
+                     notice=#{notice},
+                </if>
+                <if test="shopName != null and shopName!=''">
+                     shopName=#{shopName},
+                </if>
+                <if test="qq != null and qq!=''">
+                     qq=#{qq},
+                </if>
+                <if test="qqGroup != null and qqGroup!=''">
+                     qqGroup=#{qqGroup},
+                </if>
+                <if test="operTm != null and operTm!=''">
+                     operTm=#{operTm},
+                </if>
+                <if test="createTm != null and createTm!=''">
+                     createTm=#{createTm},
+                </if>
+        </trim>
+    </update>
+
+    <delete id="removeShopInfoById" parameterType="Long">
+        delete from shop_info where id = #{id}
+    </delete>
+</mapper>
